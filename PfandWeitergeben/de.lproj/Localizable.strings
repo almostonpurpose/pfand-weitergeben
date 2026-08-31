@@ -1,0 +1,196 @@
+/* App navigation */
+"In der Nähe" = "In der Nähe";
+"Aktivität" = "Aktivität";
+"Weitergeben" = "Weitergeben";
+"Profil" = "Profil";
+"Karte" = "Karte";
+"Liste" = "Liste";
+"Darstellung" = "Darstellung";
+"Pfand in deiner Nähe" = "Pfand in deiner Nähe";
+"Standorte sind absichtlich ungefähr" = "Standorte sind absichtlich ungefähr";
+"kleine Wege, die sich lohnen" = "kleine Wege, die sich lohnen";
+"in deiner Nähe" = "in deiner Nähe";
+
+/* Offer model and shared labels */
+"bag.small" = "Kleine Tasche";
+"bag.medium" = "Ein Beutel";
+"bag.large" = "Großer Sack";
+"bag.several" = "Mehrere Säcke";
+"status.open" = "Verfügbar";
+"status.claimed" = "Abholung vereinbart";
+"status.collected" = "Abgeholt";
+"status.cancelled" = "Storniert";
+"distance.metres" = "%d m";
+"distance.kilometres" = "%.1f km";
+"pickup.window" = "%@, %@–%@";
+"offer.bottle_count" = "Etwa %d Flaschen";
+"offer.bottle_count_plain" = "%d Flaschen";
+"offer.approximate_location" = "%@ · genauer Ort nach Annahme";
+"offer.accessibility" = "Etwa %d Flaschen, %@ entfernt. Abholung %@. Du behältst das Pfand, geschätzt %@.";
+"map.offer_accessibility" = "Angebot mit etwa %d Flaschen in %@";
+"offer.nearest_summary" = "%d Flaschen · %@";
+"offer.keep_deposit_approx" = "Du behältst ca. %@ Pfand";
+"Du behältst das Pfand" = "Du behältst das Pfand";
+"actor.you" = "Du";
+
+/* Demo places and copy */
+"meeting.library" = "Vor der Stadtteilbibliothek";
+"meeting.park" = "Am Eingang zum Körnerpark";
+"meeting.community" = "Vor dem Nachbarschaftshaus";
+"meeting.station" = "Am U-Bahnhof Hermannplatz";
+"district.neukoelln" = "Neukölln";
+"district.kreuzberg" = "Kreuzberg";
+"demo.instructions.1" = "Ich bringe den Beutel zum Eingang. Bitte kurz in der App melden.";
+"demo.instructions.2" = "Zwei Taschen, überwiegend PET-Flaschen.";
+"demo.instructions.3" = "Glas und Dosen, sauber sortiert.";
+"demo.instructions.4" = "Treffpunktdetails nach Annahme.";
+
+/* Detail and safety */
+"detail.waiting" = "%d Flaschen warten";
+"detail.small_handover" = "eine kleine Übergabe";
+"Treffpunkt" = "Treffpunkt";
+"detail.location_privacy" = "%@ · Die Karte zeigt nur die ungefähre Umgebung. Der konkrete öffentliche Treffpunkt wird nach Annahme bestätigt.";
+"detail.instructions_from" = "Hinweise von %@";
+"detail.no_instructions" = "Keine besonderen Hinweise.";
+"Annehmen und Pfand behalten" = "Annehmen und Pfand behalten";
+"Mit der Annahme vereinbarst du die Abholung. Der gesamte Pfandbetrag gehört dir." = "Mit der Annahme vereinbarst du die Abholung. Der gesamte Pfandbetrag gehört dir.";
+"Sicherheitstipps" = "Sicherheitstipps";
+"Angebot melden" = "Angebot melden";
+"Angebot nicht gefunden" = "Angebot nicht gefunden";
+"Angebot" = "Angebot";
+"Fertig" = "Fertig";
+"Sicher abholen" = "Sicher abholen";
+"Verstanden" = "Verstanden";
+"Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt." = "Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt.";
+"Warum möchtest du das Angebot melden?" = "Warum möchtest du das Angebot melden?";
+"Unangemessener Inhalt" = "Unangemessener Inhalt";
+"Verdächtiges Verhalten" = "Verdächtiges Verhalten";
+"Falsche Angaben" = "Falsche Angaben";
+"Abbrechen" = "Abbrechen";
+"Hinweis" = "Hinweis";
+"OK" = "OK";
+"Öffentlich und unkompliziert" = "Öffentlich und unkompliziert";
+"Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort." = "Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort.";
+"claim.success" = "Angebot angenommen. Den vereinbarten Treffpunkt findest du jetzt unter Aktivität.";
+"report.acknowledged" = "Danke. Die Meldung wurde im Demo-Modus vorgemerkt.";
+
+/* Create offer */
+"Pfand weitergeben" = "Pfand weitergeben";
+"du machst Platz — jemand anderes behält das Pfand" = "du machst Platz — jemand anderes behält das Pfand";
+"Schnell per Foto schätzen" = "Schnell per Foto schätzen";
+"Wie viel ist es?" = "Wie viel ist es?";
+"Geschätzte Anzahl" = "Geschätzte Anzahl";
+"Größe" = "Größe";
+"Geschätztes Pfand" = "Geschätztes Pfand";
+"Betrag" = "Betrag";
+"Wann passt es?" = "Wann passt es?";
+"Von" = "Von";
+"Bis" = "Bis";
+"Wo trefft ihr euch?" = "Wo trefft ihr euch?";
+"Öffentlicher Treffpunkt" = "Öffentlicher Treffpunkt";
+"Bitte wählen" = "Bitte wählen";
+"Warum keine Wohnadresse?" = "Warum keine Wohnadresse?";
+"Hinweise zur Übergabe" = "Hinweise zur Übergabe";
+"z. B. zwei blaue Taschen, bitte kurz melden" = "z. B. zwei blaue Taschen, bitte kurz melden";
+"Angebot veröffentlichen" = "Angebot veröffentlichen";
+"Dein Treffpunkt wird bis zur Annahme nur ungefähr angezeigt. Diese Demo speichert nichts außerhalb des Geräts." = "Dein Treffpunkt wird bis zur Annahme nur ungefähr angezeigt. Diese Demo speichert nichts außerhalb des Geräts.";
+"Neues Angebot" = "Neues Angebot";
+"Angebot ist sichtbar" = "Angebot ist sichtbar";
+"Zur Aktivität" = "Zur Aktivität";
+"Noch eins erstellen" = "Noch eins erstellen";
+"Menschen in deiner Nähe können es jetzt annehmen und behalten den gesamten Pfandbetrag." = "Menschen in deiner Nähe können es jetzt annehmen und behalten den gesamten Pfandbetrag.";
+"Deine Privatsphäre" = "Deine Privatsphäre";
+"Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung." = "Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung.";
+"Das hat nicht geklappt" = "Das hat nicht geklappt";
+
+/* Camera estimate */
+"Ausgewähltes Foto für die Pfandschätzung" = "Ausgewähltes Foto für die Pfandschätzung";
+"Foto aufnehmen" = "Foto aufnehmen";
+"Foto wählen" = "Foto wählen";
+"Foto wird nur auf diesem Gerät geprüft …" = "Foto wird nur auf diesem Gerät geprüft …";
+"Grobe Schätzung – kann falsch sein. Bitte Flaschen und Pfandwert selbst zählen und bestätigen." = "Grobe Schätzung – kann falsch sein. Bitte Flaschen und Pfandwert selbst zählen und bestätigen.";
+"Das Foto bleibt auf deinem Gerät und wird nicht hochgeladen." = "Das Foto bleibt auf deinem Gerät und wird nicht hochgeladen.";
+"Kamera nicht verfügbar" = "Kamera nicht verfügbar";
+"Du kannst stattdessen ein Foto auswählen oder Anzahl und Pfandwert direkt eingeben." = "Du kannst stattdessen ein Foto auswählen oder Anzahl und Pfandwert direkt eingeben.";
+"camera.photo_unavailable" = "Das Foto konnte nicht gelesen werden. Bitte gib die Werte manuell ein.";
+"camera.rough_result" = "Grobe Foto-Schätzung: etwa %d Flaschen, ca. %@ Pfand.";
+"camera.fallback_result" = "Keine verlässlichen Flaschenformen erkannt. Startwert: %d Flaschen, ca. %@ Pfand — bitte manuell prüfen.";
+
+/* Validation and errors */
+"validation.bottle_count" = "Bitte gib 1 bis 200 Flaschen an.";
+"validation.time_window" = "Das Ende muss nach dem Beginn liegen.";
+"validation.time_past" = "Das Zeitfenster muss in der Zukunft liegen.";
+"validation.instructions" = "Die Hinweise dürfen höchstens 280 Zeichen lang sein.";
+"validation.meeting_point" = "Bitte wähle einen öffentlichen Treffpunkt.";
+"validation.deposit" = "Bitte gib einen Pfandwert zwischen 0 und 100 Euro an.";
+"error.not_found" = "Das Angebot wurde nicht gefunden.";
+"error.transition" = "Dieser Statuswechsel ist nicht möglich.";
+
+/* Activity */
+"Was gerade läuft" = "Was gerade läuft";
+"klar, ruhig, in deinem Tempo" = "klar, ruhig, in deinem Tempo";
+"Noch nichts vereinbart" = "Noch nichts vereinbart";
+"Nimm ein Angebot an oder gib dein eigenes Pfand weiter." = "Nimm ein Angebot an oder gib dein eigenes Pfand weiter.";
+"Deine Abholungen" = "Deine Abholungen";
+"Von dir eingestellt" = "Von dir eingestellt";
+"Erledigt" = "Erledigt";
+"activity.you_collect" = "Du holst ab und behältst das Pfand: ca. %@";
+"activity.collector_collects" = "%@ holt ab und behält das Pfand.";
+"activity.not_claimed" = "Noch nicht angenommen.";
+"Als abgeholt markieren" = "Als abgeholt markieren";
+"Abholung absagen" = "Abholung absagen";
+"Angebot zurückziehen" = "Angebot zurückziehen";
+
+/* Profile, rules and safety centre */
+"Demo-Profil" = "Demo-Profil";
+"Berlin · lokal auf diesem Gerät" = "Berlin · lokal auf diesem Gerät";
+"Einstellungen" = "Einstellungen";
+"Sprache" = "Sprache";
+"Hinweis bei Annahme" = "Hinweis bei Annahme";
+"Große Kartenmarkierungen" = "Große Kartenmarkierungen";
+"Sicherheit & Vertrauen" = "Sicherheit & Vertrauen";
+"Sicherheitszentrum" = "Sicherheitszentrum";
+"Gemeinschaftsregeln" = "Gemeinschaftsregeln";
+"Standorte bleiben zunächst ungefähr" = "Standorte bleiben zunächst ungefähr";
+"Demo" = "Demo";
+"Demo-Daten zurücksetzen" = "Demo-Daten zurücksetzen";
+"Datenspeicherung" = "Datenspeicherung";
+"Nur im Arbeitsspeicher" = "Nur im Arbeitsspeicher";
+"Version" = "Version";
+"Demo-Daten zurücksetzen?" = "Demo-Daten zurücksetzen?";
+"Zurücksetzen" = "Zurücksetzen";
+"Öffentlich treffen" = "Öffentlich treffen";
+"Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung." = "Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung.";
+"Privat bleiben" = "Privat bleiben";
+"Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten." = "Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten.";
+"Abbrechen ist in Ordnung" = "Abbrechen ist in Ordnung";
+"Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe." = "Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe.";
+"Melden" = "Melden";
+"Melde unangemessene Inhalte oder verdächtiges Verhalten direkt am Angebot." = "Melde unangemessene Inhalte oder verdächtiges Verhalten direkt am Angebot.";
+"Im Notfall" = "Im Notfall";
+"Bei unmittelbarer Gefahr ruf 110. Die App ist kein Notfalldienst." = "Bei unmittelbarer Gefahr ruf 110. Die App ist kein Notfalldienst.";
+"Nur Pfandbehälter anbieten, die tatsächlich bereitstehen." = "Nur Pfandbehälter anbieten, die tatsächlich bereitstehen.";
+"Zeitfenster und Beutelgröße ehrlich beschreiben." = "Zeitfenster und Beutelgröße ehrlich beschreiben.";
+"Respektvoll kommunizieren und vereinbarte Zeiten einhalten." = "Respektvoll kommunizieren und vereinbarte Zeiten einhalten.";
+"Kein Verkauf: Die abholende Person behält ausschließlich den Pfandwert." = "Kein Verkauf: Die abholende Person behält ausschließlich den Pfandwert.";
+
+/* Optional return-point map layers — offline Berlin sample data */
+"Optionale Kartenebenen" = "Optionale Kartenebenen";
+"Eingeblendet" = "Eingeblendet";
+"Ausgeblendet" = "Ausgeblendet";
+"Legende · Beispieldaten" = "Legende · Beispieldaten";
+"Rückgabestellen · Beispieldaten" = "Rückgabestellen · Beispieldaten";
+"Nicht vollständig und ohne Echtzeit-Öffnungszeiten." = "Nicht vollständig und ohne Echtzeit-Öffnungszeiten.";
+"Beispieldaten · Öffnungsstatus nicht geprüft" = "Beispieldaten · Öffnungsstatus nicht geprüft";
+"return.kind.supermarket" = "Supermarkt-Pfandrückgabe";
+"return.kind.glass" = "Öffentlicher Glascontainer";
+"return.demo_attribution" = "Berliner Beispieldaten – keine Aussage zu Vollständigkeit oder Öffnungsstatus.";
+"return.supermarket.hermannplatz" = "Beispiel: Supermarkt am Hermannplatz";
+"return.supermarket.karlmarx" = "Beispiel: Supermarkt an der Karl-Marx-Straße";
+"return.supermarket.kottbusser" = "Beispiel: Supermarkt am Kottbusser Tor";
+"return.glass.karlmarx" = "Beispiel: Glascontainer am Karl-Marx-Platz";
+"return.glass.maybachufer" = "Beispiel: Glascontainer am Maybachufer";
+"return.glass.urbanstrasse" = "Beispiel: Glascontainer an der Urbanstraße";
+"return.map_accessibility" = "%@, %@ in %@. Beispieldaten.";
+"return.sample_hint" = "Kein Echtzeit-Öffnungsstatus; Quelle im Demo-Modus.";
+"€" = "€";
