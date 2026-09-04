@@ -16,11 +16,13 @@ final class DemoOfferStore: ObservableObject, OfferProviding {
             throw OfferStoreError.validation(issues)
         }
         let offer = Offer(
-            id: UUID(), bottleCount: draft.bottleCount, bagSize: draft.bagSize,
+            id: UUID(), depositBreakdown: draft.depositBreakdown, bagSize: draft.bagSize,
             pickupStart: draft.pickupStart, pickupEnd: draft.pickupEnd,
             instructions: draft.instructions, meetingPoint: meetingPoint,
+            handoverMethod: draft.handoverMethod,
+            privateAddress: draft.handoverMethod.requiresPrivateAddress ? draft.privateAddress.trimmingCharacters(in: .whitespacesAndNewlines) : nil,
             distanceMetres: 180, ownerName: "Du", collectorName: nil,
-            status: .open, createdAt: Date(), estimatedDeposit: draft.estimatedDeposit
+            status: .open, createdAt: Date()
         )
         offers.insert(offer, at: 0)
         return offer

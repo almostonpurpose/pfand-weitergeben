@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ProfileView: View {
+struct SettingsView: View {
     @ObservedObject var store: DemoOfferStore
     @AppStorage("appLanguage") private var appLanguage = AppLanguage.de.rawValue
     @AppStorage("useLargeMapMarkers") private var useLargeMapMarkers = true
@@ -12,19 +12,14 @@ struct ProfileView: View {
             ZStack {
                 WarmBackground()
                 List {
-                    Section {
-                        HStack(spacing: 15) {
-                            Image(systemName: "person.crop.circle.fill")
-                                .font(.system(size: 50)).foregroundStyle(AppTheme.sage)
-                            VStack(alignment: .leading, spacing: 3) {
-                                Text("Demo-Profil").font(.headline)
-                                Text("Berlin · lokal auf diesem Gerät").font(.subheadline).foregroundStyle(.secondary)
-                            }
-                        }
-                        .padding(.vertical, 5)
+                    Section("Konto") {
+                        LabeledContent("Modus", value: "Lokale Demo ohne Konto")
+                        Text("In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar.")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
                     }
 
-                    Section("Einstellungen") {
+                    Section("App-Einstellungen") {
                         Picker("Sprache", selection: $appLanguage) {
                             ForEach(AppLanguage.allCases) { language in
                                 Text(language.nativeName).tag(language.rawValue)
@@ -48,7 +43,7 @@ struct ProfileView: View {
                 }
                 .scrollContentBackground(.hidden)
             }
-            .navigationTitle("Profil")
+            .navigationTitle("Einstellungen")
             .confirmationDialog("Demo-Daten zurücksetzen?", isPresented: $showingReset) {
                 Button("Zurücksetzen", role: .destructive) { store.resetDemo() }
                 Button("Abbrechen", role: .cancel) {}
@@ -60,9 +55,10 @@ struct ProfileView: View {
 private struct SafetyCentreView: View {
     var body: some View {
         List {
-            SafetyRow(symbol: "building.2", title: "Öffentlich treffen", text: "Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung.")
-            SafetyRow(symbol: "person.crop.circle.badge.questionmark", title: "Privat bleiben", text: "Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten.")
-            SafetyRow(symbol: "xmark.octagon", title: "Abbrechen ist in Ordnung", text: "Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe.")
+            SafetyRow(symbol: "door.left.hand.open", title: "An der Tür bleiben", text: "Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein.")
+            SafetyRow(symbol: "shippingbox", title: "Kontaktlos abholen", text: "Wenn beide Seiten es möchten, kann der Beutel kurz vor dem vereinbarten Zeitpunkt vor der Tür abgestellt werden.")
+            SafetyRow(symbol: "person.crop.circle.badge.questionmark", title: "Privat bleiben", text: "Die genaue Adresse wird erst nach Annahme angezeigt. Teile keine zusätzlichen Kontaktdaten oder Zahlungsdaten.")
+            SafetyRow(symbol: "xmark.octagon", title: "Abbrechen", text: "Wenn sich etwas falsch anfühlt, beende die Abholung und zieh das Angebot zurück.")
             SafetyRow(symbol: "exclamationmark.bubble", title: "Melden", text: "Melde unangemessene Inhalte oder verdächtiges Verhalten direkt am Angebot.")
             Section("Im Notfall") {
                 Text("Bei unmittelbarer Gefahr ruf 110. Die App ist kein Notfalldienst.")

@@ -5,8 +5,7 @@ import UIKit
 import AVFoundation
 
 struct PhotoEstimateView: View {
-    @Binding var bottleCount: Int
-    @Binding var estimatedDeposit: Double
+    @Binding var roughCount: Int
 
     @State private var photoItem: PhotosPickerItem?
     @State private var previewImage: UIImage?
@@ -56,7 +55,17 @@ struct PhotoEstimateView: View {
                     .foregroundStyle(AppTheme.green)
             }
 
-            Label("Grobe Schätzung – kann falsch sein. Bitte Flaschen und Pfandwert selbst zählen und bestätigen.", systemImage: "exclamationmark.triangle")
+            if roughCount > 0 {
+                Stepper(value: $roughCount, in: 1...200) {
+                    HStack {
+                        Text("Grobe Gesamtzahl")
+                        Spacer()
+                        Text("\(roughCount)").font(.headline).monospacedDigit()
+                    }
+                }
+            }
+
+            Label("Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten.", systemImage: "exclamationmark.triangle")
                 .font(.footnote)
                 .foregroundStyle(AppTheme.secondaryInk)
 
@@ -85,19 +94,18 @@ struct PhotoEstimateView: View {
         .alert("Kamera nicht verfügbar", isPresented: $showingUnavailable) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text("Du kannst stattdessen ein Foto auswählen oder Anzahl und Pfandwert direkt eingeben.")
+            Text("Du kannst stattdessen ein Foto auswählen oder die Mengen nach Pfandart direkt eingeben.")
         }
     }
 
     @MainActor
     private func analyse(_ image: UIImage) {
         isProcessing = true
-        let result = PhotoEstimateService.estimate(from: image, fallback: bottleCount)
-        bottleCount = result.count
-        estimatedDeposit = Double(result.count) * 0.25
+        let result = PhotoEstimateService.estimate(from: image, fallback: max(roughCount, 1))
+        roughCount = result.count
         resultMessage = result.usedFallback
-            ? L10n.string("camera.fallback_result", result.count, L10n.currency(estimatedDeposit))
-            : L10n.string("camera.rough_result", result.count, L10n.currency(estimatedDeposit))
+            ? L10n.string("camera.fallback_count_result", result.count)
+            : L10n.string("camera.rough_count_result", result.count)
         isProcessing = false
     }
 

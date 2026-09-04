@@ -14,10 +14,10 @@ struct ActivityView: View {
                 WarmBackground()
                 ScrollView {
                     VStack(alignment: .leading, spacing: 26) {
-                        CareHeading(title: "Was gerade läuft", note: "klar, ruhig, in deinem Tempo")
+                        CareHeading(title: "Abholungen", note: "aktive und abgeschlossene Vorgänge")
 
                         if active.isEmpty && mine.isEmpty {
-                            ContentUnavailableView("Noch nichts vereinbart", systemImage: "leaf", description: Text("Nimm ein Angebot an oder gib dein eigenes Pfand weiter."))
+                            ContentUnavailableView("Keine aktiven Abholungen", systemImage: "shippingbox", description: Text("Nimm ein Angebot an oder erstelle ein Angebot."))
                                 .frame(minHeight: 280)
                         }
 
@@ -87,7 +87,7 @@ private struct ActiveOfferCard: View {
                 StatusPill(status: offer.status)
             }
             Divider()
-            Label("\(offer.meetingPoint.name), \(offer.meetingPoint.neighbourhood)", systemImage: "mappin.circle.fill")
+            Label(locationText, systemImage: offer.handoverMethod.symbol)
                 .font(.subheadline)
             if offer.collectorName == "Du" {
                 Text(L10n.string("activity.you_collect", L10n.currency(offer.estimatedDeposit)))
@@ -118,6 +118,13 @@ private struct ActiveOfferCard: View {
             }
         }
         .cardStyle()
+    }
+
+    private var locationText: String {
+        if offer.status == .claimed || offer.ownerName == "Du" {
+            return L10n.string("activity.confirmed_location", offer.confirmedPickupLocation)
+        }
+        return L10n.string("activity.approximate_location", offer.meetingPoint.neighbourhood)
     }
 }
 

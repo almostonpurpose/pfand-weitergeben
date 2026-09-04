@@ -17,14 +17,21 @@ struct OfferDetailView: View {
                 if let offer {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 22) {
-                            CareHeading(title: L10n.string("detail.waiting", offer.bottleCount), note: L10n.string("detail.small_handover"))
+                            CareHeading(title: L10n.string("detail.waiting", offer.bottleCount), note: L10n.string("detail.pickup"))
                             OfferCard(offer: offer)
 
-                            DetailSection(title: "Treffpunkt", symbol: "mappin.and.ellipse") {
-                                Text(offer.meetingPoint.name)
+                            DetailSection(title: "Abholort", symbol: offer.handoverMethod.symbol) {
+                                Text(offer.handoverMethod.title)
                                     .font(.headline)
-                                Text(L10n.string("detail.location_privacy", offer.meetingPoint.neighbourhood))
-                                    .foregroundStyle(.secondary)
+                                if offer.status == .open {
+                                    Text(L10n.string("detail.home_location_privacy", offer.meetingPoint.neighbourhood))
+                                        .foregroundStyle(.secondary)
+                                } else {
+                                    Text(offer.confirmedPickupLocation)
+                                        .font(.headline)
+                                    Text(offer.handoverMethod.note)
+                                        .foregroundStyle(.secondary)
+                                }
                             }
 
                             DetailSection(title: L10n.string("detail.instructions_from", displayActorName(offer.ownerName)), symbol: "text.bubble") {
@@ -66,7 +73,7 @@ struct OfferDetailView: View {
             .alert("Sicher abholen", isPresented: $showingSafety) {
                 Button("Verstanden", role: .cancel) {}
             } message: {
-                Text("Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt.")
+                Text("Bei Abholung an einer Wohnung bleibt die abholende Person draußen. Nutze bei Bedarf die kontaktlose Ablage vor der Tür und brich die Abholung ab, wenn sich etwas falsch anfühlt.")
             }
             .confirmationDialog("Warum möchtest du das Angebot melden?", isPresented: $showingReport, titleVisibility: .visible) {
                 Button("Unangemessener Inhalt", role: .destructive) { reportAcknowledged() }
@@ -115,8 +122,8 @@ private struct SafetyNote: View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "shield.checkered").font(.title3).foregroundStyle(AppTheme.green)
             VStack(alignment: .leading, spacing: 3) {
-                Text("Öffentlich und unkompliziert").font(.headline)
-                Text("Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort.")
+                Text("Abholung an der Adresse").font(.headline)
+                Text("Die genaue Adresse wird erst nach Annahme angezeigt. Die abholende Person bleibt außerhalb der Wohnung; eine Ablage vor der Tür ist möglich.")
                     .font(.subheadline).foregroundStyle(.secondary)
             }
         }

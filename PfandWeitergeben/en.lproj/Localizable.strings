@@ -177,3 +177,116 @@
 "return.map_accessibility" = "%@, %@ in %@. Sample data.";
 "return.sample_hint" = "No real-time opening status; demo source.";
 "€" = "€";
+
+/* Neutral creation and handover flow */
+"Angebot erstellen" = "Create offer";
+"Angaben zur Abholung" = "Collection details";
+"Foto-Schätzung" = "Photo estimate";
+"Behälter und Pfandwert" = "Containers and deposit value";
+"Abholzeit" = "Collection time";
+"Abholort und Übergabe" = "Collection place and handover";
+"Zusätzliche Hinweise" = "Additional instructions";
+"Gesamt" = "Total";
+"Beutelgröße" = "Bag size";
+"Tag" = "Day";
+"Beginn" = "Start";
+"Ende" = "End";
+"Zeiten sind in 15-Minuten-Schritten auswählbar." = "Times are available in 15-minute increments.";
+"Übergabeart" = "Handover method";
+"Straße, Hausnummer, Postleitzahl" = "Street, house number, postcode";
+"Ungefähre Gegend auf der Karte" = "Approximate area on the map";
+"Vereinbarter Ort" = "Agreed place";
+"Wer sieht die genaue Adresse?" = "Who sees the exact address?";
+"z. B. Beutel steht links neben der Tür" = "e.g. bag is to the left of the door";
+"Mehrwegpfand beträgt üblicherweise 8 oder 15 Cent; Einwegpfand 25 Cent. Prüfe im Zweifel das Etikett." = "Reusable deposits are usually 8 or 15 cents; one-way deposits are 25 cents. Check the label if unsure.";
+"Vor der Annahme ist nur die ungefähre Gegend sichtbar. Die genaue Adresse oder der vereinbarte Ort wird erst danach angezeigt." = "Only the approximate area is visible before acceptance. The exact address or agreed place is shown afterwards.";
+"Angebot erstellt" = "Offer created";
+"Weiteres Angebot erstellen" = "Create another offer";
+"Das Angebot ist jetzt in der Demo sichtbar." = "The offer is now visible in the demo.";
+"Adressschutz" = "Address protection";
+"Vor der Annahme sehen andere nur die ungefähre Gegend. Die genaue Abholadresse wird ausschließlich der Person angezeigt, die das Angebot angenommen hat." = "Before acceptance, others see only the approximate area. The exact collection address is shown only to the person who accepted the offer.";
+"Fehler" = "Error";
+
+/* Deposit classes */
+"deposit.reusable_8" = "Reusable · 8 cents";
+"deposit.reusable_15" = "Reusable · 15 cents";
+"deposit.single_use_25" = "One-way · 25 cents";
+"deposit.reusable_8_note" = "often standard reusable beer bottles";
+"deposit.reusable_15_note" = "often water or specialist reusable bottles";
+"deposit.single_use_25_note" = "one-way deposit bottles and cans";
+"deposit.photo_count" = "Photo estimate: about %d containers. Assign them to deposit types below.";
+"deposit.row_accessibility" = "%d containers at %d cents each";
+"Grobe Gesamtzahl" = "Rough total count";
+"Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten." = "Rough estimate — it may be wrong. Adjust the total and assign it to the deposit types below.";
+"Du kannst stattdessen ein Foto auswählen oder die Mengen nach Pfandart direkt eingeben." = "You can choose a photo instead or enter the quantities by deposit type directly.";
+"camera.rough_count_result" = "Rough photo estimate: about %d containers. The deposit type is not recognised.";
+"camera.fallback_count_result" = "No reliable container shapes were detected. Starting count: %d — please check manually.";
+
+/* Pickup privacy and safety */
+"handover.at_door" = "Hand over at the door";
+"handover.leave_at_door" = "Leave outside the door";
+"handover.agreed_place" = "Another agreed place";
+"handover.at_door_note" = "The collector rings and receives the bag at the door.";
+"handover.leave_at_door_note" = "No in-person handover. Put the bag out shortly before collection.";
+"handover.agreed_place_note" = "Collection at an agreed place away from the home.";
+"validation.private_address" = "Please enter the collection address.";
+"Abholort" = "Collection place";
+"detail.pickup" = "Collection";
+"detail.home_location_privacy" = "%@ · The exact address is shown only after acceptance.";
+"Bei Abholung an einer Wohnung bleibt die abholende Person draußen. Nutze bei Bedarf die kontaktlose Ablage vor der Tür und brich die Abholung ab, wenn sich etwas falsch anfühlt." = "For collection from a home, the collector stays outside. Use contactless collection at the door if preferred and end the collection if anything feels wrong.";
+"Abholung an der Adresse" = "Collection from the address";
+"Die genaue Adresse wird erst nach Annahme angezeigt. Die abholende Person bleibt außerhalb der Wohnung; eine Ablage vor der Tür ist möglich." = "The exact address is shown only after acceptance. The collector stays outside the home; the bag can be left at the door.";
+"activity.confirmed_location" = "Collection place: %@";
+"activity.approximate_location" = "Approximate area: %@";
+"Abholungen" = "Collections";
+"aktive und abgeschlossene Vorgänge" = "active and completed";
+"Keine aktiven Abholungen" = "No active collections";
+"Nimm ein Angebot an oder erstelle ein Angebot." = "Accept an offer or create an offer.";
+"Verfügbare Angebote" = "Available offers";
+"im angezeigten Berliner Gebiet" = "in the displayed Berlin area";
+
+/* Settings and account boundary */
+"Konto" = "Account";
+"Modus" = "Mode";
+"Lokale Demo ohne Konto" = "Local demo without an account";
+"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "In production, a lightweight account is required to create or accept offers. Public browsing remains available without signing in.";
+"App-Einstellungen" = "App settings";
+"An der Tür bleiben" = "Stay at the door";
+"Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein." = "The collector stays outside the home. Do not let anyone inside.";
+"Kontaktlos abholen" = "Contactless collection";
+"Wenn beide Seiten es möchten, kann der Beutel kurz vor dem vereinbarten Zeitpunkt vor der Tür abgestellt werden." = "If both sides prefer, the bag can be placed outside the door shortly before the agreed time.";
+"Die genaue Adresse wird erst nach Annahme angezeigt. Teile keine zusätzlichen Kontaktdaten oder Zahlungsdaten." = "The exact address is shown only after acceptance. Do not share additional contact or payment details.";
+"Abbrechen" = "Cancel";
+"Wenn sich etwas falsch anfühlt, beende die Abholung und zieh das Angebot zurück." = "If anything feels wrong, end the collection and withdraw the offer.";
+
+/* Wider Berlin demo coverage */
+"district.mitte" = "Mitte";
+"district.friedrichshain" = "Friedrichshain";
+"district.prenzlauerberg" = "Prenzlauer Berg";
+"district.wedding" = "Wedding";
+"district.schoeneberg" = "Schöneberg";
+"district.charlottenburg" = "Charlottenburg";
+"district.moabit" = "Moabit";
+"meeting.neukoelln" = "Agreed place in Neukölln";
+"meeting.kreuzberg" = "Agreed place in Kreuzberg";
+"meeting.mitte" = "Agreed place in Mitte";
+"meeting.friedrichshain" = "Agreed place in Friedrichshain";
+"meeting.prenzlauerberg" = "Agreed place in Prenzlauer Berg";
+"meeting.wedding" = "Agreed place in Wedding";
+"meeting.schoeneberg" = "Agreed place in Schöneberg";
+"meeting.charlottenburg" = "Agreed place in Charlottenburg";
+"meeting.moabit" = "Agreed place in Moabit";
+"demo.instructions.5" = "Please ring; the bag is ready inside.";
+"demo.instructions.6" = "The bag will be placed outside shortly before the start.";
+"demo.instructions.7" = "Please collect at the front door only.";
+"demo.instructions.8" = "The exact meeting place is confirmed after acceptance.";
+"return.supermarket.mitte" = "Sample: supermarket in Mitte";
+"return.supermarket.friedrichshain" = "Sample: supermarket in Friedrichshain";
+"return.supermarket.wedding" = "Sample: supermarket in Wedding";
+"return.supermarket.schoeneberg" = "Sample: supermarket in Schöneberg";
+"return.supermarket.charlottenburg" = "Sample: supermarket in Charlottenburg";
+"return.glass.kreuzberg" = "Sample: glass bins in Kreuzberg";
+"return.glass.prenzlauerberg" = "Sample: glass bins in Prenzlauer Berg";
+"return.glass.moabit" = "Sample: glass bins in Moabit";
+"return.glass.wedding" = "Sample: glass bins in Wedding";
+"return.glass.schoeneberg" = "Sample: glass bins in Schöneberg";

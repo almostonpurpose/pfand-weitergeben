@@ -9,8 +9,8 @@ struct NearbyOffersView: View {
     @State private var showGlassRecycling = false
     @State private var selectedOfferID: UUID?
     @State private var position: MapCameraPosition = .region(
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 52.484, longitude: 13.431),
-                           span: MKCoordinateSpan(latitudeDelta: 0.045, longitudeDelta: 0.045))
+        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 52.518, longitude: 13.385),
+                           span: MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.24))
     )
 
     private var openOffers: [Offer] { store.offers.filter { $0.status == .open } }
@@ -130,7 +130,7 @@ struct NearbyOffersView: View {
         ScrollView {
             LazyVStack(spacing: 13) {
                 HStack {
-                    CareHeading(title: "kleine Wege, die sich lohnen", note: "in deiner Nähe")
+                    CareHeading(title: "Verfügbare Angebote", note: "im angezeigten Berliner Gebiet")
                     Spacer()
                 }
                 .padding(.bottom, 5)

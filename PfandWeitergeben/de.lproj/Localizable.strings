@@ -194,3 +194,116 @@
 "return.map_accessibility" = "%@, %@ in %@. Beispieldaten.";
 "return.sample_hint" = "Kein Echtzeit-Öffnungsstatus; Quelle im Demo-Modus.";
 "€" = "€";
+
+/* Neutral creation and handover flow */
+"Angebot erstellen" = "Angebot erstellen";
+"Angaben zur Abholung" = "Angaben zur Abholung";
+"Foto-Schätzung" = "Foto-Schätzung";
+"Behälter und Pfandwert" = "Behälter und Pfandwert";
+"Abholzeit" = "Abholzeit";
+"Abholort und Übergabe" = "Abholort und Übergabe";
+"Zusätzliche Hinweise" = "Zusätzliche Hinweise";
+"Gesamt" = "Gesamt";
+"Beutelgröße" = "Beutelgröße";
+"Tag" = "Tag";
+"Beginn" = "Beginn";
+"Ende" = "Ende";
+"Zeiten sind in 15-Minuten-Schritten auswählbar." = "Zeiten sind in 15-Minuten-Schritten auswählbar.";
+"Übergabeart" = "Übergabeart";
+"Straße, Hausnummer, Postleitzahl" = "Straße, Hausnummer, Postleitzahl";
+"Ungefähre Gegend auf der Karte" = "Ungefähre Gegend auf der Karte";
+"Vereinbarter Ort" = "Vereinbarter Ort";
+"Wer sieht die genaue Adresse?" = "Wer sieht die genaue Adresse?";
+"z. B. Beutel steht links neben der Tür" = "z. B. Beutel steht links neben der Tür";
+"Mehrwegpfand beträgt üblicherweise 8 oder 15 Cent; Einwegpfand 25 Cent. Prüfe im Zweifel das Etikett." = "Mehrwegpfand beträgt üblicherweise 8 oder 15 Cent; Einwegpfand 25 Cent. Prüfe im Zweifel das Etikett.";
+"Vor der Annahme ist nur die ungefähre Gegend sichtbar. Die genaue Adresse oder der vereinbarte Ort wird erst danach angezeigt." = "Vor der Annahme ist nur die ungefähre Gegend sichtbar. Die genaue Adresse oder der vereinbarte Ort wird erst danach angezeigt.";
+"Angebot erstellt" = "Angebot erstellt";
+"Weiteres Angebot erstellen" = "Weiteres Angebot erstellen";
+"Das Angebot ist jetzt in der Demo sichtbar." = "Das Angebot ist jetzt in der Demo sichtbar.";
+"Adressschutz" = "Adressschutz";
+"Vor der Annahme sehen andere nur die ungefähre Gegend. Die genaue Abholadresse wird ausschließlich der Person angezeigt, die das Angebot angenommen hat." = "Vor der Annahme sehen andere nur die ungefähre Gegend. Die genaue Abholadresse wird ausschließlich der Person angezeigt, die das Angebot angenommen hat.";
+"Fehler" = "Fehler";
+
+/* Deposit classes */
+"deposit.reusable_8" = "Mehrweg · 8 Cent";
+"deposit.reusable_15" = "Mehrweg · 15 Cent";
+"deposit.single_use_25" = "Einweg · 25 Cent";
+"deposit.reusable_8_note" = "häufig Standard-Bierflaschen";
+"deposit.reusable_15_note" = "häufig Wasser- oder Spezial-Mehrweg";
+"deposit.single_use_25_note" = "Flaschen und Dosen mit Einwegpfand";
+"deposit.photo_count" = "Foto-Schätzung: etwa %d Behälter. Bitte unten nach Pfandart aufteilen.";
+"deposit.row_accessibility" = "%d Behälter zu jeweils %d Cent";
+"Grobe Gesamtzahl" = "Grobe Gesamtzahl";
+"Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten." = "Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten.";
+"Du kannst stattdessen ein Foto auswählen oder die Mengen nach Pfandart direkt eingeben." = "Du kannst stattdessen ein Foto auswählen oder die Mengen nach Pfandart direkt eingeben.";
+"camera.rough_count_result" = "Grobe Foto-Schätzung: etwa %d Behälter. Die Pfandart wird nicht erkannt.";
+"camera.fallback_count_result" = "Keine verlässlichen Behälterformen erkannt. Startwert: %d — bitte manuell prüfen.";
+
+/* Pickup privacy and safety */
+"handover.at_door" = "An der Haustür übergeben";
+"handover.leave_at_door" = "Vor der Tür abstellen";
+"handover.agreed_place" = "Anderer vereinbarter Ort";
+"handover.at_door_note" = "Die abholende Person klingelt und übernimmt den Beutel an der Tür.";
+"handover.leave_at_door_note" = "Keine persönliche Übergabe. Den Beutel erst kurz vor der Abholung herausstellen.";
+"handover.agreed_place_note" = "Abholung an einem gemeinsam vereinbarten Ort außerhalb der Wohnung.";
+"validation.private_address" = "Bitte gib die Abholadresse ein.";
+"Abholort" = "Abholort";
+"detail.pickup" = "Abholung";
+"detail.home_location_privacy" = "%@ · Die genaue Adresse wird erst nach Annahme angezeigt.";
+"Bei Abholung an einer Wohnung bleibt die abholende Person draußen. Nutze bei Bedarf die kontaktlose Ablage vor der Tür und brich die Abholung ab, wenn sich etwas falsch anfühlt." = "Bei Abholung an einer Wohnung bleibt die abholende Person draußen. Nutze bei Bedarf die kontaktlose Ablage vor der Tür und brich die Abholung ab, wenn sich etwas falsch anfühlt.";
+"Abholung an der Adresse" = "Abholung an der Adresse";
+"Die genaue Adresse wird erst nach Annahme angezeigt. Die abholende Person bleibt außerhalb der Wohnung; eine Ablage vor der Tür ist möglich." = "Die genaue Adresse wird erst nach Annahme angezeigt. Die abholende Person bleibt außerhalb der Wohnung; eine Ablage vor der Tür ist möglich.";
+"activity.confirmed_location" = "Abholort: %@";
+"activity.approximate_location" = "Ungefähre Gegend: %@";
+"Abholungen" = "Abholungen";
+"aktive und abgeschlossene Vorgänge" = "aktive und abgeschlossene Vorgänge";
+"Keine aktiven Abholungen" = "Keine aktiven Abholungen";
+"Nimm ein Angebot an oder erstelle ein Angebot." = "Nimm ein Angebot an oder erstelle ein Angebot.";
+"Verfügbare Angebote" = "Verfügbare Angebote";
+"im angezeigten Berliner Gebiet" = "im angezeigten Berliner Gebiet";
+
+/* Settings and account boundary */
+"Konto" = "Konto";
+"Modus" = "Modus";
+"Lokale Demo ohne Konto" = "Lokale Demo ohne Konto";
+"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar.";
+"App-Einstellungen" = "App-Einstellungen";
+"An der Tür bleiben" = "An der Tür bleiben";
+"Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein." = "Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein.";
+"Kontaktlos abholen" = "Kontaktlos abholen";
+"Wenn beide Seiten es möchten, kann der Beutel kurz vor dem vereinbarten Zeitpunkt vor der Tür abgestellt werden." = "Wenn beide Seiten es möchten, kann der Beutel kurz vor dem vereinbarten Zeitpunkt vor der Tür abgestellt werden.";
+"Die genaue Adresse wird erst nach Annahme angezeigt. Teile keine zusätzlichen Kontaktdaten oder Zahlungsdaten." = "Die genaue Adresse wird erst nach Annahme angezeigt. Teile keine zusätzlichen Kontaktdaten oder Zahlungsdaten.";
+"Abbrechen" = "Abbrechen";
+"Wenn sich etwas falsch anfühlt, beende die Abholung und zieh das Angebot zurück." = "Wenn sich etwas falsch anfühlt, beende die Abholung und zieh das Angebot zurück.";
+
+/* Wider Berlin demo coverage */
+"district.mitte" = "Mitte";
+"district.friedrichshain" = "Friedrichshain";
+"district.prenzlauerberg" = "Prenzlauer Berg";
+"district.wedding" = "Wedding";
+"district.schoeneberg" = "Schöneberg";
+"district.charlottenburg" = "Charlottenburg";
+"district.moabit" = "Moabit";
+"meeting.neukoelln" = "Vereinbarter Ort in Neukölln";
+"meeting.kreuzberg" = "Vereinbarter Ort in Kreuzberg";
+"meeting.mitte" = "Vereinbarter Ort in Mitte";
+"meeting.friedrichshain" = "Vereinbarter Ort in Friedrichshain";
+"meeting.prenzlauerberg" = "Vereinbarter Ort in Prenzlauer Berg";
+"meeting.wedding" = "Vereinbarter Ort in Wedding";
+"meeting.schoeneberg" = "Vereinbarter Ort in Schöneberg";
+"meeting.charlottenburg" = "Vereinbarter Ort in Charlottenburg";
+"meeting.moabit" = "Vereinbarter Ort in Moabit";
+"demo.instructions.5" = "Bitte klingeln; der Beutel steht innen bereit.";
+"demo.instructions.6" = "Der Beutel wird kurz vor Beginn vor die Tür gestellt.";
+"demo.instructions.7" = "Bitte nur an der Haustür abholen.";
+"demo.instructions.8" = "Der genaue Treffpunkt wird nach Annahme bestätigt.";
+"return.supermarket.mitte" = "Beispiel: Supermarkt in Mitte";
+"return.supermarket.friedrichshain" = "Beispiel: Supermarkt in Friedrichshain";
+"return.supermarket.wedding" = "Beispiel: Supermarkt in Wedding";
+"return.supermarket.schoeneberg" = "Beispiel: Supermarkt in Schöneberg";
+"return.supermarket.charlottenburg" = "Beispiel: Supermarkt in Charlottenburg";
+"return.glass.kreuzberg" = "Beispiel: Glascontainer in Kreuzberg";
+"return.glass.prenzlauerberg" = "Beispiel: Glascontainer in Prenzlauer Berg";
+"return.glass.moabit" = "Beispiel: Glascontainer in Moabit";
+"return.glass.wedding" = "Beispiel: Glascontainer in Wedding";
+"return.glass.schoeneberg" = "Beispiel: Glascontainer in Schöneberg";

@@ -29,6 +29,7 @@ struct OfferCard: View {
 
             Label(offer.pickupTimeText, systemImage: "clock")
             Label(L10n.string("offer.approximate_location", offer.meetingPoint.neighbourhood), systemImage: "mappin.and.ellipse")
+            Label(offer.handoverMethod.title, systemImage: offer.handoverMethod.symbol)
 
             HStack {
                 Text("Du behältst das Pfand")
