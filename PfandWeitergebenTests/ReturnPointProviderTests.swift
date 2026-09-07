@@ -7,27 +7,31 @@ final class ReturnPointProviderTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDemoProviderIsClearlyBoundedSampleData() {
+    func testBundledProviderLoadsAttributedBerlinOpenDataSnapshot() {
         UserDefaults.standard.set("en", forKey: "appLanguage")
-        let provider: any ReturnPointProviding = DemoReturnPointProvider()
+        let provider: any ReturnPointProviding = BundledBerlinReturnPointProvider()
 
-        XCTAssertTrue(provider.isSampleData)
-        XCTAssertEqual(provider.returnPoints.count, 6)
-        XCTAssertEqual(provider.returnPoints.filter { $0.kind == .supermarket }.count, 3)
-        XCTAssertEqual(provider.returnPoints.filter { $0.kind == .glassRecycling }.count, 3)
-        XCTAssertTrue(provider.attribution.localizedCaseInsensitiveContains("sample"))
-        XCTAssertTrue(provider.attribution.localizedCaseInsensitiveContains("no claim"))
+        XCTAssertFalse(provider.isSampleData)
+        XCTAssertEqual(provider.returnPoints.count, 177)
+        XCTAssertEqual(provider.returnPoints.filter { $0.kind == .supermarket }.count, 92)
+        XCTAssertEqual(provider.returnPoints.filter { $0.kind == .glassRecycling }.count, 85)
+        XCTAssertEqual(provider.returnPoints.filter { $0.evidence == .bottleReturnMachine }.count, 16)
+        XCTAssertTrue(provider.attribution.localizedCaseInsensitiveContains("OpenStreetMap"))
+        XCTAssertTrue(provider.attribution.localizedCaseInsensitiveContains("ODbL"))
+        XCTAssertNotNil(provider.sourceURL)
     }
 
-    func testDemoCoordinatesAreBerlinSamplesAndLabelsAreLocalised() {
+    func testBundledCoordinatesCoverBerlinAndHaveUsableLabels() {
         UserDefaults.standard.set("de", forKey: "appLanguage")
-        let points = DemoReturnPointProvider().returnPoints
+        let points = BundledBerlinReturnPointProvider().returnPoints
 
+        XCTAssertFalse(points.isEmpty)
         for point in points {
             XCTAssertTrue((52.3 ... 52.7).contains(point.latitude))
-            XCTAssertTrue((13.1 ... 13.8).contains(point.longitude))
-            XCTAssertTrue(point.name.hasPrefix("Beispiel:"))
-            XCTAssertFalse(point.area.isEmpty)
+            XCTAssertTrue((13.0 ... 13.9).contains(point.longitude))
+            XCTAssertFalse(point.displayName.isEmpty)
+            XCTAssertFalse(point.displayArea.isEmpty)
+            XCTAssertFalse(point.evidence.note.isEmpty)
         }
     }
 }

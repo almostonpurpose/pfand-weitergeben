@@ -1,8 +1,8 @@
 /* App navigation */
 "In der Nähe" = "In der Nähe";
 "Aktivität" = "Aktivität";
-"Weitergeben" = "Weitergeben";
-"Profil" = "Profil";
+"Weitergeben" = "Angebot";
+"Profil" = "Einstellungen";
 "Karte" = "Karte";
 "Liste" = "Liste";
 "Darstellung" = "Darstellung";
@@ -49,7 +49,7 @@
 "detail.waiting" = "%d Flaschen warten";
 "detail.small_handover" = "eine kleine Übergabe";
 "Treffpunkt" = "Treffpunkt";
-"detail.location_privacy" = "%@ · Die Karte zeigt nur die ungefähre Umgebung. Der konkrete öffentliche Treffpunkt wird nach Annahme bestätigt.";
+"detail.location_privacy" = "%@ · Die Karte zeigt nur die ungefähre Umgebung. Der genaue Abholort wird nach Annahme angezeigt.";
 "detail.instructions_from" = "Hinweise von %@";
 "detail.no_instructions" = "Keine besonderen Hinweise.";
 "Annehmen und Pfand behalten" = "Annehmen und Pfand behalten";
@@ -61,7 +61,7 @@
 "Fertig" = "Fertig";
 "Sicher abholen" = "Sicher abholen";
 "Verstanden" = "Verstanden";
-"Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt." = "Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt.";
+"Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt." = "Bei Abholung zu Hause bleibt die abholende Person an der Tür. Kontaktlose Ablage oder ein anderer vereinbarter Ort sind ebenfalls möglich. Brich ab, wenn sich etwas falsch anfühlt.";
 "Warum möchtest du das Angebot melden?" = "Warum möchtest du das Angebot melden?";
 "Unangemessener Inhalt" = "Unangemessener Inhalt";
 "Verdächtiges Verhalten" = "Verdächtiges Verhalten";
@@ -70,7 +70,7 @@
 "Hinweis" = "Hinweis";
 "OK" = "OK";
 "Öffentlich und unkompliziert" = "Öffentlich und unkompliziert";
-"Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort." = "Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort.";
+"Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort." = "Abholung an der Haustür ist möglich. Die genaue Adresse wird erst nach Annahme angezeigt; kontaktlose Ablage ist ebenfalls möglich.";
 "claim.success" = "Angebot angenommen. Den vereinbarten Treffpunkt findest du jetzt unter Aktivität.";
 "report.acknowledged" = "Danke. Die Meldung wurde im Demo-Modus vorgemerkt.";
 
@@ -87,9 +87,9 @@
 "Von" = "Von";
 "Bis" = "Bis";
 "Wo trefft ihr euch?" = "Wo trefft ihr euch?";
-"Öffentlicher Treffpunkt" = "Öffentlicher Treffpunkt";
+"Öffentlicher Treffpunkt" = "Abholort";
 "Bitte wählen" = "Bitte wählen";
-"Warum keine Wohnadresse?" = "Warum keine Wohnadresse?";
+"Warum keine Wohnadresse?" = "Abholung zu Hause";
 "Hinweise zur Übergabe" = "Hinweise zur Übergabe";
 "z. B. zwei blaue Taschen, bitte kurz melden" = "z. B. zwei blaue Taschen, bitte kurz melden";
 "Angebot veröffentlichen" = "Angebot veröffentlichen";
@@ -100,7 +100,7 @@
 "Noch eins erstellen" = "Noch eins erstellen";
 "Menschen in deiner Nähe können es jetzt annehmen und behalten den gesamten Pfandbetrag." = "Menschen in deiner Nähe können es jetzt annehmen und behalten den gesamten Pfandbetrag.";
 "Deine Privatsphäre" = "Deine Privatsphäre";
-"Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung." = "Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung.";
+"Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung." = "Du kannst eine Abholadresse oder einen anderen Ort angeben. Vor der Annahme sehen andere nur die ungefähre Umgebung.";
 "Das hat nicht geklappt" = "Das hat nicht geklappt";
 
 /* Camera estimate */
@@ -160,9 +160,9 @@
 "Demo-Daten zurücksetzen?" = "Demo-Daten zurücksetzen?";
 "Zurücksetzen" = "Zurücksetzen";
 "Öffentlich treffen" = "Öffentlich treffen";
-"Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung." = "Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung.";
+"Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung." = "Wähle die Haustür, kontaktlose Ablage oder einen anderen Ort – so, wie es für beide Seiten passt.";
 "Privat bleiben" = "Privat bleiben";
-"Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten." = "Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten.";
+"Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten." = "Nutze für die Abholadresse ausschließlich die geschützte Adressangabe in der App. Teile keine zusätzlichen Kontakt- oder Zahlungsdaten.";
 "Abbrechen ist in Ordnung" = "Abbrechen ist in Ordnung";
 "Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe." = "Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe.";
 "Melden" = "Melden";
@@ -191,8 +191,8 @@
 "return.glass.karlmarx" = "Beispiel: Glascontainer am Karl-Marx-Platz";
 "return.glass.maybachufer" = "Beispiel: Glascontainer am Maybachufer";
 "return.glass.urbanstrasse" = "Beispiel: Glascontainer an der Urbanstraße";
-"return.map_accessibility" = "%@, %@ in %@. Beispieldaten.";
-"return.sample_hint" = "Kein Echtzeit-Öffnungsstatus; Quelle im Demo-Modus.";
+"return.map_accessibility" = "%@, %@ in %@.";
+"return.sample_hint" = "Kein Echtzeit-Öffnungsstatus.";
 "€" = "€";
 
 /* Neutral creation and handover flow */
@@ -307,3 +307,37 @@
 "return.glass.moabit" = "Beispiel: Glascontainer in Moabit";
 "return.glass.wedding" = "Beispiel: Glascontainer in Wedding";
 "return.glass.schoeneberg" = "Beispiel: Glascontainer in Schöneberg";
+
+/* Open Berlin return-point snapshot */
+"Rückgabestellen in Berlin" = "Rückgabestellen in Berlin";
+"OpenStreetMap-Daten; nicht vollständig und ohne Echtzeit-Öffnungszeiten." = "OpenStreetMap-Daten; nicht vollständig und ohne Echtzeit-Öffnungszeiten.";
+"Legende · offene Daten" = "Legende · offene Daten";
+"Quelle & Lizenz" = "Quelle & Lizenz";
+"return.osm_attribution" = "OpenStreetMap-Snapshot vom %@ · © OpenStreetMap-Mitwirkende · ODbL · nicht vollständig oder live";
+"return.generic.supermarket" = "Supermarkt";
+"return.generic.bottle_return" = "Pfandrückgabeautomat";
+"return.generic.glass" = "Altglascontainer";
+"return.area.berlin" = "Berlin";
+"return.evidence.supermarket" = "Supermarktstandort in OpenStreetMap; Pfandrücknahme und Behälterarten vor Ort prüfen.";
+"return.evidence.bottle_return" = "In OpenStreetMap ausdrücklich als Pfandrückgabeautomat markiert; Status vor Ort prüfen.";
+"return.evidence.glass" = "In OpenStreetMap als Annahmestelle für Glasflaschen markiert; kein Pfandautomat.";
+
+/* Optional Berlin support contacts */
+"Hilfe in Berlin" = "Hilfe in Berlin";
+"Direkte, freiwillige Kontakte für dich oder jemanden in deiner Nähe. Die App leitet keine Daten weiter und ruft niemanden automatisch an." = "Direkte, freiwillige Kontakte für dich oder jemanden in deiner Nähe. Die App leitet keine Daten weiter und ruft niemanden automatisch an.";
+"Akute Hilfe" = "Akute Hilfe";
+"Rettungsdienst · 112" = "Rettungsdienst · 112";
+"Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist" = "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist";
+"Polizei · 110" = "Polizei · 110";
+"Bei unmittelbarer Bedrohung" = "Bei unmittelbarer Bedrohung";
+"Wohnungsnotfallhilfe" = "Wohnungsnotfallhilfe";
+"Kältebus · 030 690 333 690" = "Kältebus · 030 690 333 690";
+"Saisonaler Abenddienst der Berliner Stadtmission; nur anrufen, wenn die Person Hilfe annehmen möchte" = "Saisonaler Abenddienst der Berliner Stadtmission; nur anrufen, wenn die Person Hilfe annehmen möchte";
+"Kältehilfetelefon · 030 343 971 40" = "Kältehilfetelefon · 030 343 971 40";
+"Informationen zu verfügbaren Schlafplätzen während der Kältehilfesaison" = "Informationen zu verfügbaren Schlafplätzen während der Kältehilfesaison";
+"Kältehilfe-Wegweiser öffnen" = "Kältehilfe-Wegweiser öffnen";
+"Aktuelle Notübernachtungen, Tagesangebote und Beratung in Berlin" = "Aktuelle Notübernachtungen, Tagesangebote und Beratung in Berlin";
+"Soziale Wohnhilfe Berlin" = "Soziale Wohnhilfe Berlin";
+"Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft";
+"Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle.";
+"Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst.";

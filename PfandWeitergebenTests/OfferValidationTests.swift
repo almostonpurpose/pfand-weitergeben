@@ -7,12 +7,13 @@ final class OfferValidationTests: XCTestCase {
         draft.pickupStart = Date().addingTimeInterval(3_600)
         draft.pickupEnd = Date().addingTimeInterval(7_200)
         draft.meetingPoint = DemoData.meetingPoints[0]
+        draft.privateAddress = "Musterweg 12, 12043 Berlin"
         XCTAssertTrue(draft.validationIssues().isEmpty)
     }
 
     func testRejectsMissingMeetingPointAndInvalidCount() {
         var draft = OfferDraft()
-        draft.bottleCount = 0
+        draft.depositBreakdown = DepositBreakdown()
         draft.meetingPoint = nil
         let issues = draft.validationIssues()
         XCTAssertTrue(issues.contains(.invalidBottleCount))
@@ -34,11 +35,23 @@ final class OfferValidationTests: XCTestCase {
         XCTAssertTrue(draft.validationIssues().contains(.instructionsTooLong))
     }
 
-    func testRejectsDepositOutsideEditableRange() {
+    func testHomeCollectionRequiresAnAddress() {
         var draft = OfferDraft()
-        draft.estimatedDeposit = 101
         draft.meetingPoint = DemoData.meetingPoints[0]
-        XCTAssertTrue(draft.validationIssues().contains(.invalidDepositEstimate))
+        draft.privateAddress = ""
+        XCTAssertTrue(draft.validationIssues().contains(.missingPrivateAddress))
+    }
+
+    func testAgreedPlaceDoesNotRequireAHomeAddress() {
+        var draft = OfferDraft()
+        draft.handoverMethod = .agreedPlace
+        draft.privateAddress = ""
+        XCTAssertFalse(draft.validationIssues().contains(.missingPrivateAddress))
+    }
+
+    func testDepositBreakdownUsesEightFifteenAndTwentyFiveCentValues() {
+        let breakdown = DepositBreakdown(reusableEight: 2, reusableFifteen: 3, singleUseTwentyFive: 4)
+        XCTAssertEqual(breakdown.totalCount, 9)
+        XCTAssertEqual(breakdown.estimatedValue, 1.61, accuracy: 0.001)
     }
 }
-

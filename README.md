@@ -2,7 +2,7 @@
 
 Eine native iPhone-App, über die Nachbar:innen Pfandflaschen unkompliziert weitergeben: Eine Person stellt ein Angebot ein, eine andere nimmt es an, holt die Behälter ab und **behält den vollständigen Pfandbetrag**.
 
-Der aktuelle Stand ist ein polierter, vollständig lokaler Prototyp. Er startet ohne Konto, Server oder Zugangsdaten mit realistischen Demo-Angeboten.
+Der aktuelle Stand ist ein polierter, vollständig lokaler Prototyp. Er startet ohne Konto, Server oder Zugangsdaten mit klar gekennzeichneten Demo-Angeboten. Die öffentlichen Rückgabestellen sind dagegen ein lizenzierter OpenStreetMap-Datenschnappschuss für ganz Berlin.
 
 ## Öffnen und starten
 
@@ -15,17 +15,18 @@ Für ein eigenes Gerät unter **Signing & Capabilities** das persönliche Apple-
 ## Enthalten
 
 - Kartenbasierte Angebotssuche mit zugänglicher Listenalternative
-- Zwei optionale, klar unterscheidbare Kartenebenen für Supermarkt-Pfandrückgaben und öffentliche Glascontainer, jeweils auch als gefilterte Liste und mit Legende
-- Angebot erstellen: Flaschenzahl, Beutelgröße, Zeitfenster, Hinweise und öffentlicher Treffpunkt
+- Zwei optionale, klar unterscheidbare Kartenebenen mit 177 realen OpenStreetMap-Standorten für Supermärkte/Pfandrückgabe und öffentliche Glascontainer, jeweils auch als gefilterte Liste und mit Legende
+- Angebot erstellen: getrennte Mengen für 8-, 15- und 25-Cent-Pfand, Beutelgröße, 15-Minuten-Zeitfenster, Hinweise und Abholort
 - Detailansicht mit gut sichtbarem Pfand-Hinweis und Annahme
 - Aktivitätsansicht für `verfügbar → vereinbart → abgeholt` sowie Stornierung
 - Sicherheitszentrum, Angebotsmeldung, Gemeinschaftsregeln und Einstellungen
 - Vollständige App-Sprache in Deutsch, Englisch, Arabisch und Türkisch; Deutsch ist Standard, Arabisch nutzt RTL-Layout
-- In-App-Sprachwahl unter **Profil → Einstellungen → Sprache**
-- Schnelle lokale Foto-Schätzung per Kamera oder Fotomediathek mit bearbeitbarer Anzahl und bearbeitbarem Pfandwert
-- Ungefähre Standortdarstellung vor Annahme; keine Wohnadresse im Datenmodell
+- In-App-Sprachwahl unter **Einstellungen → Sprache**
+- Schnelle lokale Foto-Schätzung per Kamera oder Fotomediathek mit bearbeitbarer grober Gesamtzahl; die Person verteilt sie anschliessend selbst auf 8, 15 und 25 Cent
+- Abholung an der Haustür, kontaktlose Ablage vor der Tür oder anderer vereinbarter Ort; die genaue Adresse erscheint erst nach Annahme
+- Optionaler Bereich **Hilfe in Berlin** mit 112/110, Kältebus, Kältehilfetelefon, aktuellem Kältehilfe-Wegweiser und Sozialer Wohnhilfe
 - Lokaler Demo-Speicher hinter dem `OfferProviding`-Protokoll
-- Lokale Berliner Beispiel-Rückgabestellen hinter dem austauschbaren `ReturnPointProviding`-Protokoll
+- Lizenzierter Berliner OpenStreetMap-Snapshot hinter dem austauschbaren `ReturnPointProviding`-Protokoll
 - SwiftUI-Previews, Demo-Daten, Datenschutzmanifest und Unit-Tests
 
 ## Architektur und späterer Cloudflare-Dienst
@@ -44,19 +45,19 @@ Keine Provider-Schlüssel gehören in die App. Der Demo-Build führt keine eigen
 
 ## Kartenebenen und Datenquellen
 
-Die beiden optionalen Kartenebenen enthalten im Offline-Demo jeweils drei ausdrücklich als **Beispieldaten** bezeichnete Berliner Punkte. Sie dienen nur dazu, Kartenmarker, Legende, Filter und Listenansicht unmittelbar ausprobieren zu können.
+Die beiden optionalen Kartenebenen laden einen mitgelieferten Schnappschuss vom **7. September 2026** mit 177 über Berlin verteilten OpenStreetMap-Standorten: 92 Supermarkt-/Pfandrückgabe-Einträge und 85 Altglasstandorte. Die App zeigt Quelle, Lizenz und Datenalter direkt an.
 
-- Die Supermarkt-Punkte sind keine vollständige Händlerliste und bestätigen nicht, dass ein Markt alle Behälterarten annimmt.
-- Die Glascontainer-Punkte sind ebenfalls Demo-Einträge, keine amtlich geprüften Standorte.
+- Bei 16 Punkten ist in OpenStreetMap ausdrücklich `vending=bottle_return` hinterlegt. Die übrigen Supermarktpunkte belegen nur den Marktstandort; Pfandrücknahme und angenommene Behälter müssen vor Ort geprüft werden.
+- Altglaspunkte tragen in OpenStreetMap `recycling:glass_bottles=yes`; sie sind keine Pfandrückgabeautomaten.
 - Es werden weder Verfügbarkeit noch Öffnungs- oder Leerungsstatus in Echtzeit behauptet.
-- `ReturnPointProviding` trennt die Oberfläche vom Ursprung der Daten. Eine Produktionsimplementierung muss eine nachweislich lizenzierte öffentliche/Open-Data-Quelle verwenden, Attribution, Lizenz, Aktualisierungszeit und Qualitätsgrenzen erhalten und dokumentieren.
+- `ReturnPointProviding` trennt die Oberfläche vom Ursprung der Daten. Import, Auswahlgrenze, Attribution und ODbL-Hinweise stehen in [`docs/OPEN_DATA.md`](docs/OPEN_DATA.md).
 - Supermarktstandorte dürfen nicht als vollständig bezeichnet werden; Öffnungszeiten dürfen nur angezeigt werden, wenn Quelle und Aktualität dafür belastbar sind.
 
-Das Demo fordert weiterhin keinen Gerätestandort an. Die sichtbaren Rückgabestellen sind öffentliche Beispiel-POIs; sie ändern nichts an der ungefähren Darstellung persönlicher Übergabeorte.
+Das Demo fordert weiterhin keinen Gerätestandort an. Die sichtbaren Rückgabestellen sind öffentliche POIs; sie ändern nichts an der ungefähren Darstellung persönlicher Übergabeorte.
 
 ## Foto-Schätzung und Datenschutz
 
-Die Angebotserstellung kann ein Foto aufnehmen oder über Apples systemeigenen Photo Picker auswählen. Eine lokale Vision-Konturanalyse liefert einen bewusst groben Startwert für Anzahl und Pfandbetrag. Beides bleibt editierbar und muss manuell bestätigt werden.
+Die Angebotserstellung kann ein Foto aufnehmen oder über Apples systemeigenen Photo Picker auswählen. Eine lokale Vision-Konturanalyse liefert einen bewusst groben Startwert für die Gesamtzahl. Sie erkennt keine Pfandklasse. Die Person verteilt die Menge selbst auf Mehrweg 8 Cent, Mehrweg 15 Cent und Einweg 25 Cent; daraus wird der Wert berechnet.
 
 - Das Foto wird nicht hochgeladen und nicht im Angebot gespeichert.
 - Die App behauptet keine genaue Flaschen- oder Pfanderkennung.
@@ -88,13 +89,17 @@ xcodebuild test \
   -destination 'platform=iOS Simulator,name=iPhone 16 Pro'
 ```
 
-Getestet werden Validierung, erlaubte/verbotene Statusübergänge, Foto-Fallback, die Vollständigkeit der vier Sprachressourcen sowie Umfang, Kennzeichnung und Berliner Plausibilität der Demo-Rückgabestellen.
+Getestet werden Validierung, erlaubte/verbotene Statusübergänge, Foto-Fallback, Pfandberechnung, Haustür-/Kontaktlos-Logik, Vollständigkeit der vier Sprachressourcen sowie Umfang, Lizenzkennzeichnung und Berliner Plausibilität der Rückgabestellen.
 
 ## Lokal verifiziert
 
-Stand 31. August 2026 wurde das Projekt mit Xcode 26.4 für einen **iPhone 16 Pro Simulator (iOS 18.3.1)** neu gebaut, installiert und eigenständig gestartet. Die vollständige XCTest-Suite bestand **16 von 16 Tests**. Die vier `Localizable.strings`-Kataloge enthalten jeweils **177 identische Schlüssel**; Platzhalter-Arity und Property-List-Syntax wurden ebenfalls geprüft. Der gebaute App-Bundle weist Deutsch als Entwicklungsregion und `de`, `en`, `ar`, `tr` als unterstützte Sprachen aus.
+Stand 7. September 2026 wurde das Projekt mit Xcode 26.4 für einen **iPhone 16 Pro Simulator (iOS 18.3.1)** neu gebaut, installiert und eigenständig gestartet. Die vollständige XCTest-Suite bestand **20 von 20 Tests**. Die vier `Localizable.strings`-Kataloge enthalten jeweils **309 identische Schlüssel**. Deutsch sowie Arabisch im echten RTL-Layout wurden im laufenden Simulator visuell geprüft. Der mitgelieferte OSM-Provider lädt 177 Punkte; Tests prüfen die Aufteilung, Berlin-Koordinaten, Evidenzhinweise und Attribution.
 
-Damit verifiziert sind Kompilierung, App-Start, Status- und Validierungslogik, lokaler Foto-Fallback, Sprachressourcen sowie die Demo-Providergrenze und Berliner Plausibilität der Rückgabestellen. Nicht verifiziert sind reale Kamera-Erkennungsqualität, Muttersprachler-Lektorat, reale Rückgabestellen-/Öffnungsdaten, Backendbetrieb oder App-Store-Freigabe.
+Damit verifiziert sind Kompilierung, App-Start, Haustür-/Kontaktlos-Fluss, Status- und Validierungslogik, 8-/15-/25-Cent-Berechnung, lokaler Foto-Fallback, Sprachressourcen, RTL sowie die lizenzierte Rückgabedaten-Grenze. Nicht verifiziert sind reale Kamera-Erkennungsqualität, Muttersprachler-Lektorat, Vollständigkeit/Live-Status der OSM-Daten, Backendbetrieb zwischen mehreren Geräten oder App-Store-Freigabe.
+
+## Konten in der Produktionsfassung
+
+Öffentliches Stöbern sollte ohne Konto möglich bleiben. Für das Erstellen und Annehmen eines Angebots ist ein schlankes Konto sinnvoll, weil genau diese Aktionen Zuständigkeit, Adressfreigabe, Stornierung und Missbrauchsschutz brauchen. Ein öffentliches soziales Profil ist dafür nicht nötig; Anzeigename, verifizierte Kontaktmöglichkeit und interne Vertrauens-/Moderationsdaten genügen.
 
 ## Vor Produktion und App-Store-Einreichung
 
@@ -105,7 +110,7 @@ Der lokale Prototyp ist kein produktionsbereiter Dienst. Vor einer Veröffentlic
 3. **Standort:** Einwilligungsdialog nur falls GPS ergänzt wird; datensparsame Rundung/Geofencing; klare Löschfristen. Der Prototyp fordert bewusst keine Standortberechtigung an.
 4. **Kamera & Bilder:** finalen Kamera-Berechtigungstext je Sprache prüfen, Ablehnung/Elternkontrollen auf realen Geräten testen und die lokale Bildverarbeitung in Datenschutzangaben beschreiben. Falls Bilder später gespeichert oder hochgeladen würden, wäre eine neue ausdrückliche Produkt- und Datenschutzentscheidung nötig.
 5. **Schätzmodell:** mit vielfältigen realen Fotos, Lichtbedingungen, Dosen, Glas/PET, verdeckten Behältern und Nicht-Pfand-Gegenständen kalibrieren; Fehlerraten messen. Die Konturheuristik ist keine produktionsreife Objekterkennung.
-6. **Karten und Rückgabestellen:** MapKit-Nutzung auf reale Region und Verfügbarkeit testen. Für Treffpunkte eine kuratierte/moderierte Quelle vorsehen. Für Supermarkt-Rücknahmen und Glascontainer eine korrekt lizenzierte öffentliche/Open-Data-Quelle auswählen, Nutzungsbedingungen und Attribution prüfen, Aktualisierungsrhythmus sowie Datenalter offenlegen und keine Vollständigkeit oder Echtzeit-Öffnung behaupten.
+6. **Karten und Rückgabestellen:** den OSM-Import regelmässig und nachvollziehbar aktualisieren, Datendichte/Clustering für weitere Städte lösen und weiterhin keine Vollständigkeit oder Echtzeit-Öffnung behaupten.
 7. **Moderation:** funktionierender Report-Workflow, Blockieren, Reaktionszeiten, Eskalation, Missbrauchsprävention und erreichbarer Support. Der Demo-Report wird nur bestätigt, nicht versendet.
 8. **Sicherheit:** Alters-/Nutzungsregeln, Risikoanalyse für persönliche Übergaben, Notfalltext, Rate Limits und Schutz vor Standort-Scraping.
 9. **Recht & Datenschutz:** Datenschutzerklärung, Nutzungsbedingungen, Impressum/Betreiberangaben, Datenverarbeitungsverzeichnis und finale App-Privacy-Angaben in App Store Connect.

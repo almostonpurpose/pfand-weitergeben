@@ -4,10 +4,12 @@ import XCTest
 @MainActor
 final class OfferStateTransitionTests: XCTestCase {
     private func makeOpenOffer() -> Offer {
-        Offer(id: UUID(), bottleCount: 10, bagSize: .medium,
+        Offer(id: UUID(), depositBreakdown: DepositBreakdown(singleUseTwentyFive: 10), bagSize: .medium,
               pickupStart: Date().addingTimeInterval(3_600), pickupEnd: Date().addingTimeInterval(7_200),
-              instructions: "", meetingPoint: DemoData.meetingPoints[0], distanceMetres: 100,
-              ownerName: "Mara", collectorName: nil, status: .open, createdAt: Date(), estimatedDeposit: 2.50)
+              instructions: "", meetingPoint: DemoData.meetingPoints[0],
+              handoverMethod: .atDoor, privateAddress: "Musterweg 12, 12043 Berlin",
+              distanceMetres: 100, ownerName: "Mara", collectorName: nil,
+              status: .open, createdAt: Date())
     }
 
     func testOpenOfferCanBeClaimedThenCollected() throws {
@@ -39,7 +41,7 @@ final class OfferStateTransitionTests: XCTestCase {
     func testCreateRejectsInvalidDraft() {
         let store = DemoOfferStore(offers: [])
         var draft = OfferDraft()
-        draft.bottleCount = 0
+        draft.depositBreakdown = DepositBreakdown()
         draft.meetingPoint = nil
         XCTAssertThrowsError(try store.create(from: draft))
         XCTAssertTrue(store.offers.isEmpty)

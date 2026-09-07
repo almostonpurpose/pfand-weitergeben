@@ -26,14 +26,19 @@ final class LocalizationTests: XCTestCase {
     func testSafetyCameraDepositAndMapMessagesExistInEveryLanguage() {
         let required = [
             "Annehmen und Pfand behalten",
-            "Grobe Schätzung – kann falsch sein. Bitte Flaschen und Pfandwert selbst zählen und bestätigen.",
+            "Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten.",
             "Das Foto bleibt auf deinem Gerät und wird nicht hochgeladen.",
-            "Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort.",
+            "handover.at_door",
+            "handover.leave_at_door",
+            "validation.private_address",
             "Optionale Kartenebenen",
-            "Nicht vollständig und ohne Echtzeit-Öffnungszeiten.",
+            "OpenStreetMap-Daten; nicht vollständig und ohne Echtzeit-Öffnungszeiten.",
             "return.kind.supermarket",
             "return.kind.glass",
-            "return.demo_attribution"
+            "return.osm_attribution",
+            "Hilfe in Berlin",
+            "Kältebus · 030 690 333 690",
+            "Kältehilfe-Wegweiser öffnen"
         ]
         for language in ["de", "en", "ar", "tr"] {
             guard let path = Bundle.main.path(forResource: "Localizable", ofType: "strings", inDirectory: nil, forLocalization: language),
@@ -41,6 +46,20 @@ final class LocalizationTests: XCTestCase {
                 return XCTFail("Missing localisation \(language)")
             }
             required.forEach { XCTAssertNotNil(dictionary[$0], "Missing \($0) in \(language)") }
+        }
+    }
+
+    func testLegacySafetyCopyNoLongerForbidsHomeCollection() {
+        let key = "Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung."
+        for language in ["de", "en", "ar", "tr"] {
+            guard let path = Bundle.main.path(forResource: "Localizable", ofType: "strings", inDirectory: nil, forLocalization: language),
+                  let dictionary = NSDictionary(contentsOfFile: path) as? [String: String],
+                  let value = dictionary[key] else {
+                return XCTFail("Missing localisation \(language)")
+            }
+            XCTAssertFalse(value.localizedCaseInsensitiveContains("never a home"))
+            XCTAssertFalse(value.localizedCaseInsensitiveContains("nie eine Wohnung"))
+            XCTAssertFalse(value.localizedCaseInsensitiveContains("asla ev"))
         }
     }
 

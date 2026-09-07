@@ -31,6 +31,7 @@ struct SettingsView: View {
 
                     Section("Sicherheit & Vertrauen") {
                         NavigationLink { SafetyCentreView() } label: { Label("Sicherheitszentrum", systemImage: "shield") }
+                        NavigationLink { SupportServicesView() } label: { Label("Hilfe in Berlin", systemImage: "cross.case") }
                         NavigationLink { CommunityRulesView() } label: { Label("Gemeinschaftsregeln", systemImage: "person.2") }
                         Label("Standorte bleiben zunächst ungefähr", systemImage: "location.slash")
                     }
@@ -61,10 +62,72 @@ private struct SafetyCentreView: View {
             SafetyRow(symbol: "xmark.octagon", title: "Abbrechen", text: "Wenn sich etwas falsch anfühlt, beende die Abholung und zieh das Angebot zurück.")
             SafetyRow(symbol: "exclamationmark.bubble", title: "Melden", text: "Melde unangemessene Inhalte oder verdächtiges Verhalten direkt am Angebot.")
             Section("Im Notfall") {
-                Text("Bei unmittelbarer Gefahr ruf 110. Die App ist kein Notfalldienst.")
+                Text("Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst.")
             }
         }
         .navigationTitle("Sicherheitszentrum")
+    }
+}
+
+private struct SupportServicesView: View {
+    var body: some View {
+        List {
+            Section {
+                Text("Direkte, freiwillige Kontakte für dich oder jemanden in deiner Nähe. Die App leitet keine Daten weiter und ruft niemanden automatisch an.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section("Akute Hilfe") {
+                Link(destination: URL(string: "tel:112")!) {
+                    SupportLinkRow(symbol: "cross.circle.fill", title: "Rettungsdienst · 112", detail: "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist")
+                }
+                Link(destination: URL(string: "tel:110")!) {
+                    SupportLinkRow(symbol: "shield.fill", title: "Polizei · 110", detail: "Bei unmittelbarer Bedrohung")
+                }
+            }
+
+            Section("Wohnungsnotfallhilfe") {
+                Link(destination: URL(string: "tel:+4930690333690")!) {
+                    SupportLinkRow(symbol: "bus.fill", title: "Kältebus · 030 690 333 690", detail: "Saisonaler Abenddienst der Berliner Stadtmission; nur anrufen, wenn die Person Hilfe annehmen möchte")
+                }
+                Link(destination: URL(string: "tel:+493034397140")!) {
+                    SupportLinkRow(symbol: "phone.fill", title: "Kältehilfetelefon · 030 343 971 40", detail: "Informationen zu verfügbaren Schlafplätzen während der Kältehilfesaison")
+                }
+                Link(destination: URL(string: "https://www.kaeltehilfe-berlin.de/wegweiser-shelter-map")!) {
+                    SupportLinkRow(symbol: "map.fill", title: "Kältehilfe-Wegweiser öffnen", detail: "Aktuelle Notübernachtungen, Tagesangebote und Beratung in Berlin")
+                }
+                Link(destination: URL(string: "https://www.berlin.de/sen/soziales/besondere-lebenssituationen/wohnungslose/praevention/")!) {
+                    SupportLinkRow(symbol: "building.2.fill", title: "Soziale Wohnhilfe Berlin", detail: "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft")
+                }
+            }
+
+            Section {
+                Text("Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .navigationTitle("Hilfe in Berlin")
+    }
+}
+
+private struct SupportLinkRow: View {
+    let symbol: String
+    let title: String
+    let detail: String
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: symbol)
+                .foregroundStyle(AppTheme.green)
+                .frame(width: 28)
+            VStack(alignment: .leading, spacing: 3) {
+                Text(LocalizedStringKey(title)).font(.headline)
+                Text(LocalizedStringKey(detail)).font(.subheadline).foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 5)
     }
 }
 

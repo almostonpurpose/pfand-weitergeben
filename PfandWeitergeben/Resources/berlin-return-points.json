@@ -1,0 +1,1601 @@
+{
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "sourceURL": "https://www.openstreetmap.org/copyright",
+  "snapshotDate": "2026-09-07",
+  "points": [
+    {
+      "id": "node-101003688",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "nah und gut",
+      "area": "Güntzelstraße 40, 10717",
+      "latitude": 52.4913971,
+      "longitude": 13.3228827
+    },
+    {
+      "id": "node-1038217542",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5606455,
+      "longitude": 13.1724843
+    },
+    {
+      "id": "node-10679260719",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Glascontainer",
+      "area": "",
+      "latitude": 52.6020388,
+      "longitude": 13.3061951
+    },
+    {
+      "id": "node-10691690483",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5845452,
+      "longitude": 13.4172868
+    },
+    {
+      "id": "node-10813983418",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4155717,
+      "longitude": 13.6687476
+    },
+    {
+      "id": "node-11207575950",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Glascontainer",
+      "area": "Am Nordgraben",
+      "latitude": 52.5883567,
+      "longitude": 13.3404882
+    },
+    {
+      "id": "node-11295829133",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Lidl",
+      "area": "",
+      "latitude": 52.4583731,
+      "longitude": 13.3303217
+    },
+    {
+      "id": "node-11802767490",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6134378,
+      "longitude": 13.2465220
+    },
+    {
+      "id": "node-11843801727",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Studierendenwerk Berlin",
+      "area": "",
+      "latitude": 52.5097869,
+      "longitude": 13.3259679
+    },
+    {
+      "id": "node-11970625112",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA Gayermann",
+      "area": "Barnetstraße 41, 12305, Lichtenrade",
+      "latitude": 52.3982545,
+      "longitude": 13.3911351
+    },
+    {
+      "id": "node-1224801762",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Buckower Damm 50, 12349, Britz",
+      "latitude": 52.4399784,
+      "longitude": 13.4341127
+    },
+    {
+      "id": "node-1242393463",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3492957,
+      "longitude": 13.6460657
+    },
+    {
+      "id": "node-1278665294",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4260841,
+      "longitude": 13.1869258
+    },
+    {
+      "id": "node-1331460598",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3716246,
+      "longitude": 13.6935168
+    },
+    {
+      "id": "node-14138166661",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5402831,
+      "longitude": 13.6204657
+    },
+    {
+      "id": "node-1608593640",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4102033,
+      "longitude": 13.2653754
+    },
+    {
+      "id": "node-1608593790",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Rhenus",
+      "area": "",
+      "latitude": 52.4243896,
+      "longitude": 13.2394082
+    },
+    {
+      "id": "node-1608593993",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Rhenus",
+      "area": "",
+      "latitude": 52.4665543,
+      "longitude": 13.1196689
+    },
+    {
+      "id": "node-1608594003",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4679263,
+      "longitude": 13.1260868
+    },
+    {
+      "id": "node-1663969749",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Alexander-Meißner-Straße 1, 12526",
+      "latitude": 52.3972377,
+      "longitude": 13.5415199
+    },
+    {
+      "id": "node-1713393011",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Alemannenstraße 40, 14129",
+      "latitude": 52.4296140,
+      "longitude": 13.1930983
+    },
+    {
+      "id": "node-1720474146",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Nahkauf",
+      "area": "",
+      "latitude": 52.5768477,
+      "longitude": 13.2781392
+    },
+    {
+      "id": "node-1892081724",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Berliner Stadtreinigungsbetriebe",
+      "area": "",
+      "latitude": 52.5927605,
+      "longitude": 13.2761222
+    },
+    {
+      "id": "node-1933351957",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6434953,
+      "longitude": 13.4931307
+    },
+    {
+      "id": "node-1965564089",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4417038,
+      "longitude": 13.6038867
+    },
+    {
+      "id": "node-1995245028",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4406280,
+      "longitude": 13.2173360
+    },
+    {
+      "id": "node-2251295174",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE City",
+      "area": "Angerburger Allee 45, 14055, Westend",
+      "latitude": 52.5093116,
+      "longitude": 13.2223259
+    },
+    {
+      "id": "node-245261389",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Müllerstraße 128, 13349, Wedding",
+      "latitude": 52.5524232,
+      "longitude": 13.3480665
+    },
+    {
+      "id": "node-2458196842",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5722790,
+      "longitude": 13.3080801
+    },
+    {
+      "id": "node-2478939039",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6078558,
+      "longitude": 13.4280398
+    },
+    {
+      "id": "node-251340008",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Edeka Leher",
+      "area": "Fürstenwalder Allee 314, 12589, Rahnsdorf",
+      "latitude": 52.4315738,
+      "longitude": 13.7149761
+    },
+    {
+      "id": "node-251595302",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "PENNY",
+      "area": "Pankower Allee 47-49, Reinickendorf",
+      "latitude": 52.5650380,
+      "longitude": 13.3706441
+    },
+    {
+      "id": "node-257704877",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Lidl",
+      "area": "Neuendorfer Straße 30, 13585",
+      "latitude": 52.5476038,
+      "longitude": 13.2100323
+    },
+    {
+      "id": "node-2596510021",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6094716,
+      "longitude": 13.3291387
+    },
+    {
+      "id": "node-259835062",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Lidl",
+      "area": "Falkenseer Damm 19, 13585, Spandau",
+      "latitude": 52.5428752,
+      "longitude": 13.1965568
+    },
+    {
+      "id": "node-259855794",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Theodor-Heuss-Platz 7, 14052, Westend",
+      "latitude": 52.5085368,
+      "longitude": 13.2716801
+    },
+    {
+      "id": "node-262212828",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5190209,
+      "longitude": 13.4856806
+    },
+    {
+      "id": "node-262353263",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Schnellerstraße 21, 12439",
+      "latitude": 52.4573120,
+      "longitude": 13.5078518
+    },
+    {
+      "id": "node-262355894",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA",
+      "area": "Frankfurter Allee 35 - 37, 10247, Friedrichshain",
+      "latitude": 52.5156150,
+      "longitude": 13.4623106
+    },
+    {
+      "id": "node-264620848",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Oberweißbacher Straße 2-4, 12687",
+      "latitude": 52.5565629,
+      "longitude": 13.5714829
+    },
+    {
+      "id": "node-264645629",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE City",
+      "area": "Südwestkorso 36, 14197, Wilmersdorf",
+      "latitude": 52.4686357,
+      "longitude": 13.3117953
+    },
+    {
+      "id": "node-267093410",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5084566,
+      "longitude": 13.5928941
+    },
+    {
+      "id": "node-2675474222",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6404803,
+      "longitude": 13.3998974
+    },
+    {
+      "id": "node-268021255",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE City",
+      "area": "Otto-Suhr-Allee 141, 10585, Charlottenburg",
+      "latitude": 52.5190008,
+      "longitude": 13.3007843
+    },
+    {
+      "id": "node-268664135",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Lidl",
+      "area": "Berliner Straße 27-28, 13189, Pankow",
+      "latitude": 52.5635840,
+      "longitude": 13.4121460
+    },
+    {
+      "id": "node-26867409",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Berlin Recycling",
+      "area": "",
+      "latitude": 52.5013289,
+      "longitude": 13.2968280
+    },
+    {
+      "id": "node-269478706",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Rudower Chaussee 12, 12489, Adlershof",
+      "latitude": 52.4328220,
+      "longitude": 13.5351004
+    },
+    {
+      "id": "node-270814685",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA",
+      "area": "Fischerhüttenstraße 68, 14163, Zehlendorf",
+      "latitude": 52.4422611,
+      "longitude": 13.2404658
+    },
+    {
+      "id": "node-270814692",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA",
+      "area": "Potsdamer Chaussee 80, 14129, Zehlendorf",
+      "latitude": 52.4268546,
+      "longitude": 13.2159158
+    },
+    {
+      "id": "node-2714023800",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Recycling",
+      "area": "",
+      "latitude": 52.4519725,
+      "longitude": 13.3343376
+    },
+    {
+      "id": "node-272247519",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Penny",
+      "area": "Britzer Damm 73, 12347, Britz",
+      "latitude": 52.4560576,
+      "longitude": 13.4374685
+    },
+    {
+      "id": "node-272619379",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5218288,
+      "longitude": 13.4556341
+    },
+    {
+      "id": "node-273174898",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Rhenus",
+      "area": "",
+      "latitude": 52.4576525,
+      "longitude": 13.2984812
+    },
+    {
+      "id": "node-273765898",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Sömmeringstraße 24-26, 10589",
+      "latitude": 52.5234230,
+      "longitude": 13.3065606
+    },
+    {
+      "id": "node-276191847",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Norma",
+      "area": "Heinrich-Grüber-Straße 86, 12621, Kaulsdorf",
+      "latitude": 52.5194368,
+      "longitude": 13.5973616
+    },
+    {
+      "id": "node-277837190",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "nah und gut",
+      "area": "Sonnenallee 330, 12057, Neukölln",
+      "latitude": 52.4639513,
+      "longitude": 13.4731548
+    },
+    {
+      "id": "node-2782835422",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA",
+      "area": "Oraniendamm 6-10, 13469, Waidmannslust",
+      "latitude": 52.6072867,
+      "longitude": 13.3264979
+    },
+    {
+      "id": "node-280752631",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5533590,
+      "longitude": 13.5763842
+    },
+    {
+      "id": "node-289359993",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Weißenhöher Straße 88 - 108, 12683",
+      "latitude": 52.5068475,
+      "longitude": 13.5578938
+    },
+    {
+      "id": "node-290659186",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6157261,
+      "longitude": 13.4760484
+    },
+    {
+      "id": "node-292092618",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA",
+      "area": "Franz-Jacob-Straße 4, 10369, Fennpfuhl",
+      "latitude": 52.5254295,
+      "longitude": 13.4657308
+    },
+    {
+      "id": "node-292745926",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6160560,
+      "longitude": 13.4854219
+    },
+    {
+      "id": "node-292935637",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer Rohstoffverwertung",
+      "area": "",
+      "latitude": 52.4915304,
+      "longitude": 13.4203789
+    },
+    {
+      "id": "node-293130996",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Lausanner Straße 83, 12205, Lichterfelde",
+      "latitude": 52.4269688,
+      "longitude": 13.3036734
+    },
+    {
+      "id": "node-294793374",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5237931,
+      "longitude": 13.2027164
+    },
+    {
+      "id": "node-297803736",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Lankwitzer Straße 19, 12209, Lichterfelde",
+      "latitude": 52.4297351,
+      "longitude": 13.3300480
+    },
+    {
+      "id": "node-301845927",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Lidl",
+      "area": "Malteserstraße 162/164, 12277, Marienfelde",
+      "latitude": 52.4173898,
+      "longitude": 13.3620284
+    },
+    {
+      "id": "node-302764895",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5098752,
+      "longitude": 13.6142969
+    },
+    {
+      "id": "node-304367382",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Heerstraße 560, 13591, Staaken",
+      "latitude": 52.5250164,
+      "longitude": 13.1414723
+    },
+    {
+      "id": "node-304371509",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Havemannstraße 12a, 12689, Marzahn",
+      "latitude": 52.5687154,
+      "longitude": 13.5684842
+    },
+    {
+      "id": "node-308019560",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Alfred-Kowalke-Straße 2, 10315",
+      "latitude": 52.5048235,
+      "longitude": 13.5150175
+    },
+    {
+      "id": "node-309364526",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer Rohstoffverwertung",
+      "area": "",
+      "latitude": 52.4948000,
+      "longitude": 13.3285005
+    },
+    {
+      "id": "node-310440153",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3949142,
+      "longitude": 13.5852924
+    },
+    {
+      "id": "node-3112849844",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Walter-Friedrich-Straße 4, 13125, Buch",
+      "latitude": 52.6345809,
+      "longitude": 13.4959380
+    },
+    {
+      "id": "node-313188999",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "HIT Ullrich",
+      "area": "Schloßstraße 110, 12163, Steglitz",
+      "latitude": 52.4610364,
+      "longitude": 13.3251331
+    },
+    {
+      "id": "node-315363226",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4614302,
+      "longitude": 13.3667535
+    },
+    {
+      "id": "node-318349843",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Schönhauser Allee 10-11, 10119, Prenzlauer Berg",
+      "latitude": 52.5305826,
+      "longitude": 13.4121544
+    },
+    {
+      "id": "node-319546170",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Siemensdamm 43-44, 13629, Siemensstadt",
+      "latitude": 52.5363802,
+      "longitude": 13.2746944
+    },
+    {
+      "id": "node-325161422",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5095928,
+      "longitude": 13.1808748
+    },
+    {
+      "id": "node-330967542",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5024516,
+      "longitude": 13.3852118
+    },
+    {
+      "id": "node-333460025",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Bio Company",
+      "area": "Friesenstraße 1, 10965",
+      "latitude": 52.4888756,
+      "longitude": 13.3942017
+    },
+    {
+      "id": "node-338497703",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer AG",
+      "area": "",
+      "latitude": 52.5672966,
+      "longitude": 13.3877587
+    },
+    {
+      "id": "node-338818027",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer AG",
+      "area": "",
+      "latitude": 52.4076515,
+      "longitude": 13.3782148
+    },
+    {
+      "id": "node-339115156",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer AG",
+      "area": "",
+      "latitude": 52.5590269,
+      "longitude": 13.3768185
+    },
+    {
+      "id": "node-342440323",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Berlin Recycling",
+      "area": "",
+      "latitude": 52.4361424,
+      "longitude": 13.3521442
+    },
+    {
+      "id": "node-345347331",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5266326,
+      "longitude": 13.4803789
+    },
+    {
+      "id": "node-348000444",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Invalidenstraße 158, 10115",
+      "latitude": 52.5319807,
+      "longitude": 13.3970838
+    },
+    {
+      "id": "node-351387149",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4380071,
+      "longitude": 13.2958855
+    },
+    {
+      "id": "node-354513927",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Rhenus",
+      "area": "",
+      "latitude": 52.5256057,
+      "longitude": 13.1371426
+    },
+    {
+      "id": "node-359096354",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Clayallee 336, 14169, Zehlendorf",
+      "latitude": 52.4370650,
+      "longitude": 13.2622014
+    },
+    {
+      "id": "node-364048640",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Prerower Platz 1, 13051",
+      "latitude": 52.5639937,
+      "longitude": 13.5054562
+    },
+    {
+      "id": "node-3715748985",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4359652,
+      "longitude": 13.6994002
+    },
+    {
+      "id": "node-3724534693",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "TEXAID Collection GmbH",
+      "area": "",
+      "latitude": 52.4189772,
+      "longitude": 13.1527489
+    },
+    {
+      "id": "node-388415435",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5623895,
+      "longitude": 13.4126742
+    },
+    {
+      "id": "node-390384562",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "PENNY",
+      "area": "Heerstraße 378-382, 13593, Wilhelmstadt",
+      "latitude": 52.5189760,
+      "longitude": 13.1707459
+    },
+    {
+      "id": "node-392310411",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4708171,
+      "longitude": 13.4375685
+    },
+    {
+      "id": "node-393769325",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "Bochumer Straße",
+      "latitude": 52.5211399,
+      "longitude": 13.3386484
+    },
+    {
+      "id": "node-395053992",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Rewe",
+      "area": "Sakrower Landstraße 1A, 14089",
+      "latitude": 52.4528593,
+      "longitude": 13.1430094
+    },
+    {
+      "id": "node-4012358090",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4253759,
+      "longitude": 13.7216447
+    },
+    {
+      "id": "node-4012502976",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4410279,
+      "longitude": 13.6903563
+    },
+    {
+      "id": "node-409925348",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5059284,
+      "longitude": 13.5571988
+    },
+    {
+      "id": "node-412196333",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Bruno-Taut-Straße 1, 12524, Bohnsdorf",
+      "latitude": 52.4123748,
+      "longitude": 13.5717456
+    },
+    {
+      "id": "node-413275520",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Bahnhofstraße 33-38, 12555",
+      "latitude": 52.4586902,
+      "longitude": 13.5772772
+    },
+    {
+      "id": "node-418333606",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5387042,
+      "longitude": 13.2700489
+    },
+    {
+      "id": "node-429466365",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5076045,
+      "longitude": 13.4791757
+    },
+    {
+      "id": "node-437371861",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4682539,
+      "longitude": 13.5050283
+    },
+    {
+      "id": "node-437371863",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4519822,
+      "longitude": 13.5232036
+    },
+    {
+      "id": "node-442390306",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Taste Hellas",
+      "area": "Tempelhofer Damm 218, 12099, Tempelhof",
+      "latitude": 52.4565269,
+      "longitude": 13.3836393
+    },
+    {
+      "id": "node-442877823",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Recyclinghof Ilsenburger Straße",
+      "area": "Ilsenburger Straße 18-20, 10589, Charlottenburg",
+      "latitude": 52.5270158,
+      "longitude": 13.3106192
+    },
+    {
+      "id": "node-446099267",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3969716,
+      "longitude": 13.3816281
+    },
+    {
+      "id": "node-447962689",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Rauchstraße 56, 13587, Hakenfelde",
+      "latitude": 52.5615636,
+      "longitude": 13.2138439
+    },
+    {
+      "id": "node-452634938",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4403083,
+      "longitude": 13.4585534
+    },
+    {
+      "id": "node-470471637",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Johannisthaler Chaussee 200, 12351",
+      "latitude": 52.4308875,
+      "longitude": 13.4561386
+    },
+    {
+      "id": "node-472441901",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4232609,
+      "longitude": 13.4548357
+    },
+    {
+      "id": "node-472470011",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4273682,
+      "longitude": 13.4066725
+    },
+    {
+      "id": "node-473428818",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3991735,
+      "longitude": 13.5539100
+    },
+    {
+      "id": "node-481148748",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Königstraße 56/57, 14109, Wannsee",
+      "latitude": 52.4189357,
+      "longitude": 13.1575422
+    },
+    {
+      "id": "node-492062434",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5462933,
+      "longitude": 13.5455305
+    },
+    {
+      "id": "node-506480293",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5753268,
+      "longitude": 13.2119003
+    },
+    {
+      "id": "node-538247124",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5706802,
+      "longitude": 13.5754175
+    },
+    {
+      "id": "node-546677899",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Hauptstraße 9, 13055",
+      "latitude": 52.5483391,
+      "longitude": 13.5039694
+    },
+    {
+      "id": "node-583790772",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5688247,
+      "longitude": 13.4468207
+    },
+    {
+      "id": "node-58489979",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Alte Jakobstraße 83, 10179, Mitte",
+      "latitude": 52.5098189,
+      "longitude": 13.4073729
+    },
+    {
+      "id": "node-600406053",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4193419,
+      "longitude": 13.5102354
+    },
+    {
+      "id": "node-602528055",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Triftstraße 20, 13127, Französisch Buchholz",
+      "latitude": 52.6106315,
+      "longitude": 13.4313872
+    },
+    {
+      "id": "node-610199981",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Norma",
+      "area": "John-Locke-Straße, 12305, Lichtenrade",
+      "latitude": 52.3920130,
+      "longitude": 13.4028107
+    },
+    {
+      "id": "node-663879954",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Hubertusdamm 64-65, 13125, Karow",
+      "latitude": 52.6152820,
+      "longitude": 13.4703820
+    },
+    {
+      "id": "node-666427342",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer Rohstoffverwertung",
+      "area": "",
+      "latitude": 52.5193996,
+      "longitude": 13.2562765
+    },
+    {
+      "id": "node-668246113",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4502288,
+      "longitude": 13.2547114
+    },
+    {
+      "id": "node-672157091",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Märkische Allee 166, 168, 172, 12681, Marzahn",
+      "latitude": 52.5335687,
+      "longitude": 13.5384595
+    },
+    {
+      "id": "node-693251387",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5661670,
+      "longitude": 13.4944524
+    },
+    {
+      "id": "node-693892036",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Netto",
+      "area": "",
+      "latitude": 52.4908368,
+      "longitude": 13.3169695
+    },
+    {
+      "id": "node-696733150",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3824218,
+      "longitude": 13.4101677
+    },
+    {
+      "id": "node-699536319",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "REWE",
+      "area": "Alt-Rudow 64, 12355",
+      "latitude": 52.4170906,
+      "longitude": 13.4957148
+    },
+    {
+      "id": "node-701733262",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3781889,
+      "longitude": 13.6417348
+    },
+    {
+      "id": "node-7021709955",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5344952,
+      "longitude": 13.4461438
+    },
+    {
+      "id": "node-7096084792",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5339645,
+      "longitude": 13.4558934
+    },
+    {
+      "id": "node-718143820",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Rhenus",
+      "area": "",
+      "latitude": 52.5074263,
+      "longitude": 13.2282412
+    },
+    {
+      "id": "node-737216262",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Karl Meyer Rohstoffverwertung GmbH",
+      "area": "Grellstraße, 10409",
+      "latitude": 52.5449491,
+      "longitude": 13.4294318
+    },
+    {
+      "id": "node-7454365760",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5298211,
+      "longitude": 13.6203166
+    },
+    {
+      "id": "node-7476211559",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.3908943,
+      "longitude": 13.1309007
+    },
+    {
+      "id": "node-7609092413",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Kaufland",
+      "area": "",
+      "latitude": 52.5530248,
+      "longitude": 13.3467024
+    },
+    {
+      "id": "node-761371627",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4457914,
+      "longitude": 13.5640995
+    },
+    {
+      "id": "node-7899286103",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5008595,
+      "longitude": 13.4349441
+    },
+    {
+      "id": "node-79418658",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Ledo",
+      "area": "Quäkerstraße 2, 13403, Reinickendorf",
+      "latitude": 52.5724174,
+      "longitude": 13.3085471
+    },
+    {
+      "id": "node-79438509",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Nahkauf",
+      "area": "Meller Bogen 2, 13403",
+      "latitude": 52.5704861,
+      "longitude": 13.3211440
+    },
+    {
+      "id": "node-808390952",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "PENNY",
+      "area": "Welsestraße 56-58, 13057",
+      "latitude": 52.5647175,
+      "longitude": 13.5236193
+    },
+    {
+      "id": "node-808406147",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "EDEKA P. Erler",
+      "area": "Ludolfingerplatz 6, 13465",
+      "latitude": 52.6328875,
+      "longitude": 13.2870410
+    },
+    {
+      "id": "node-8285634934",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5699934,
+      "longitude": 13.5598967
+    },
+    {
+      "id": "node-832913693",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6208296,
+      "longitude": 13.3880473
+    },
+    {
+      "id": "node-851572172",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4049770,
+      "longitude": 13.5310079
+    },
+    {
+      "id": "node-8546173217",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5810605,
+      "longitude": 13.4005198
+    },
+    {
+      "id": "node-860022923",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Bio Company",
+      "area": "Bölschestraße 2, 12587, Friedrichshagen",
+      "latitude": 52.4470689,
+      "longitude": 13.6245399
+    },
+    {
+      "id": "node-861870104",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "NORMA",
+      "area": "Quedlinburger Straße 31, 12627, Hellersdorf",
+      "latitude": 52.5401190,
+      "longitude": 13.6100206
+    },
+    {
+      "id": "node-9032239075",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Rewe Markt GmbH",
+      "area": "",
+      "latitude": 52.4786259,
+      "longitude": 13.4299446
+    },
+    {
+      "id": "node-9032239076",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Rewe Markt GmbH",
+      "area": "",
+      "latitude": 52.4786063,
+      "longitude": 13.4299509
+    },
+    {
+      "id": "node-9032239077",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Rewe Markt GmbH",
+      "area": "",
+      "latitude": 52.4785857,
+      "longitude": 13.4299579
+    },
+    {
+      "id": "node-9032239078",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": "Netto",
+      "area": "",
+      "latitude": 52.4789992,
+      "longitude": 13.4272071
+    },
+    {
+      "id": "node-942862141",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4030508,
+      "longitude": 13.5768683
+    },
+    {
+      "id": "node-9488848225",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.4388848,
+      "longitude": 13.6003958
+    },
+    {
+      "id": "node-9707534299",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.6267790,
+      "longitude": 13.2270206
+    },
+    {
+      "id": "node-9952815366",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": null,
+      "area": "",
+      "latitude": 52.5215311,
+      "longitude": 13.6469117
+    },
+    {
+      "id": "node-9972300216",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5095803,
+      "longitude": 13.4348006
+    },
+    {
+      "id": "node-9975835206",
+      "kind": "supermarket",
+      "evidence": "bottleReturnMachine",
+      "name": null,
+      "area": "",
+      "latitude": 52.5204907,
+      "longitude": 13.3886189
+    },
+    {
+      "id": "way-111253359",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Rewe",
+      "area": "Adlergestell 744, 12527, Schmöckwitz",
+      "latitude": 52.3791916,
+      "longitude": 13.6436004
+    },
+    {
+      "id": "way-1200769075",
+      "kind": "glassRecycling",
+      "evidence": "glassBottleRecycling",
+      "name": "Recyclinghof Brunsbütteler Damm",
+      "area": "Brunsbütteler Damm 47, 13581, Spandau",
+      "latitude": 52.5338625,
+      "longitude": 13.1909832
+    },
+    {
+      "id": "way-158541685",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto",
+      "area": "Waltersdorfer Straße 19, 12526, Bohnsdorf",
+      "latitude": 52.3993914,
+      "longitude": 13.5743475
+    },
+    {
+      "id": "way-190972010",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto",
+      "area": "Dahlwitzer Straße 60, 12623, Mahlsdorf",
+      "latitude": 52.5214082,
+      "longitude": 13.6476620
+    },
+    {
+      "id": "way-23387054",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Fürstenwalder Allee 8, 12589, Rahnsdorf",
+      "latitude": 52.4420672,
+      "longitude": 13.6851551
+    },
+    {
+      "id": "way-24740811",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Penny",
+      "area": "Ruppiner Chaussee 243, 13503, Heiligensee",
+      "latitude": 52.6150007,
+      "longitude": 13.2436996
+    },
+    {
+      "id": "way-24754887",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Edeka Heiligensee",
+      "area": "Ruppiner Chaussee 301, 13503, Heiligensee",
+      "latitude": 52.6183685,
+      "longitude": 13.2390611
+    },
+    {
+      "id": "way-25706921",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Kaufland",
+      "area": "Romain-Rolland-Straße 13, 13089, Heinersdorf",
+      "latitude": 52.5639191,
+      "longitude": 13.4449738
+    },
+    {
+      "id": "way-26995770",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto",
+      "area": "Schnellerstraße 88, 12439, Niederschöneweide",
+      "latitude": 52.4525733,
+      "longitude": 13.5298556
+    },
+    {
+      "id": "way-307024605",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Aldi",
+      "area": "Zepernicker Straße 10, 13125, Buch",
+      "latitude": 52.6405264,
+      "longitude": 13.5145647
+    },
+    {
+      "id": "way-474904447",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Lidl",
+      "area": "Quickborner Straße 66, 13439, Märkisches Viertel",
+      "latitude": 52.6040316,
+      "longitude": 13.3680172
+    },
+    {
+      "id": "way-51096824",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Müggelheimer Damm 257, 12559, Müggelheim",
+      "latitude": 52.4144673,
+      "longitude": 13.6587666
+    },
+    {
+      "id": "way-89156165",
+      "kind": "supermarket",
+      "evidence": "supermarketLocation",
+      "name": "Netto Marken-Discount",
+      "area": "Hultschiner Damm 200;204, 12623",
+      "latitude": 52.4924761,
+      "longitude": 13.6095661
+    }
+  ]
+}

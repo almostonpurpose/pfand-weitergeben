@@ -11,13 +11,14 @@
 ## Standort und Karten
 
 - Die App fordert keine Standortberechtigung an und liest keinen Gerätestandort.
-- Angebotspunkte sind fest eingebaute, ungefähre Demo-Koordinaten. Eine exakte Wohnadresse ist nicht Teil des öffentlichen Datenmodells.
-- Die eingebauten Supermarkt- und Glascontainerpunkte sind ausdrücklich bezeichnete Berliner Beispieldaten. Sie sind weder vollständig noch eine Aussage zu Annahmeumfang, Öffnungs-, Leerungs- oder Echtzeitstatus.
+- Öffentliche Angebotspunkte sind fest eingebaute, ungefähre Demo-Koordinaten. Für Haustürabholung erfasst der lokale Prototyp eine genaue Adresse im Arbeitsspeicher; öffentlich angezeigt wird sie nicht. Nach Annahme sieht sie nur die angenommene Abholung innerhalb dieses lokalen Demo-Zustands.
+- Die eingebauten Supermarkt- und Glascontainerpunkte sind ein OpenStreetMap-Snapshot vom 7. September 2026. Sie sind weder vollständig noch eine Aussage zu Annahmeumfang, Öffnungs-, Leerungs- oder Echtzeitstatus.
 - MapKit kann Kartenkacheln und zugehörige Systeminhalte nach Apples Regeln laden. Die App sendet keine Fotos oder Angebotsdaten an einen eigenen Dienst.
-- Eine Produktionsquelle für Rückgabestellen muss nachweislich lizenziert sein. Quellenangabe, Lizenzbedingungen, Datenalter, Aktualisierung und bekannte Qualitätsgrenzen müssen erhalten und in App/Datenschutzerklärung beschrieben werden; der Provider darf diese öffentlichen POIs nicht mit privaten Übergabekoordinaten vermischen.
+- Quelle und Lizenzgrenze des Snapshots stehen in `docs/OPEN_DATA.md`. Ein Produktions-Refresh muss Attribution, ODbL, Datenalter und bekannte Qualitätsgrenzen erhalten; der Provider darf diese öffentlichen POIs nicht mit privaten Übergabekoordinaten vermischen.
 
 ## Lokale Daten
 
 - Angebote und Statusänderungen existieren nur im Arbeitsspeicher und gehen beim Neustart verloren.
 - Es gibt im Prototyp keine Konten, Analyse-SDKs, Tracker, Push-Tokens oder eigenen Netzwerkendpunkte.
+- Die Links unter „Hilfe in Berlin“ öffnen Telefon oder Browser nur nach einer ausdrücklichen Berührung. Die App übermittelt dabei selbst keine Profildaten oder Angebotsdaten und löst keinen automatischen Kontakt aus.
 - Das Datenschutzmanifest erklärt deshalb keine Datenerhebung und kein Tracking. Vor jeder Distribution müssen Implementierung, App-Store-Angaben und diese Notizen erneut gegeneinander geprüft werden.

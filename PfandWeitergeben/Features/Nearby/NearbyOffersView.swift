@@ -20,7 +20,7 @@ struct NearbyOffersView: View {
         }
     }
 
-    init(store: DemoOfferStore, returnPointProvider: any ReturnPointProviding = DemoReturnPointProvider()) {
+    init(store: DemoOfferStore, returnPointProvider: any ReturnPointProviding = BundledBerlinReturnPointProvider()) {
         self.store = store
         self.returnPointProvider = returnPointProvider
     }
@@ -46,7 +46,8 @@ struct NearbyOffersView: View {
                         MapLegend(
                             showSupermarkets: showSupermarkets,
                             showGlassRecycling: showGlassRecycling,
-                            attribution: returnPointProvider.attribution
+                            attribution: returnPointProvider.attribution,
+                            sourceURL: returnPointProvider.sourceURL
                         )
                             .padding(.horizontal, 16)
                             .padding(.bottom, 8)
@@ -85,15 +86,15 @@ struct NearbyOffersView: View {
                 }
             }
             ForEach(visibleReturnPoints) { point in
-                Annotation(point.name, coordinate: point.coordinate) {
+                Annotation(point.displayName, coordinate: point.coordinate) {
                     Image(systemName: point.kind.symbol)
                         .font(.headline)
                         .foregroundStyle(.white)
                         .frame(width: 40, height: 40)
                         .background(point.kind.mapColor, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(.white, lineWidth: 2))
-                        .accessibilityLabel(L10n.string("return.map_accessibility", point.kind.title, point.name, point.area))
-                        .accessibilityHint(L10n.string("return.sample_hint"))
+                        .accessibilityLabel(L10n.string("return.map_accessibility", point.kind.title, point.displayName, point.displayArea))
+                        .accessibilityHint(Text(point.evidence.note))
                 }
             }
         }
@@ -141,15 +142,19 @@ struct NearbyOffersView: View {
 
                 if !visibleReturnPoints.isEmpty {
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Rückgabestellen · Beispieldaten")
+                        Text("Rückgabestellen in Berlin")
                             .font(.title3.weight(.medium))
                             .foregroundStyle(AppTheme.ink)
-                        Text("Nicht vollständig und ohne Echtzeit-Öffnungszeiten.")
+                        Text("OpenStreetMap-Daten; nicht vollständig und ohne Echtzeit-Öffnungszeiten.")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                         Text(verbatim: returnPointProvider.attribution)
                             .font(.caption)
                             .foregroundStyle(.secondary)
+                        if let sourceURL = returnPointProvider.sourceURL {
+                            Link("Quelle & Lizenz", destination: sourceURL)
+                                .font(.caption.weight(.semibold))
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 12)
@@ -203,11 +208,12 @@ private struct MapLegend: View {
     let showSupermarkets: Bool
     let showGlassRecycling: Bool
     let attribution: String
+    let sourceURL: URL?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(spacing: 12) {
-                Text("Legende · Beispieldaten").font(.caption.weight(.semibold))
+                Text("Legende · offene Daten").font(.caption.weight(.semibold))
                 if showSupermarkets { LegendItem(kind: .supermarket) }
                 if showGlassRecycling { LegendItem(kind: .glassRecycling) }
                 Spacer()
@@ -215,6 +221,10 @@ private struct MapLegend: View {
             Text(verbatim: attribution)
                 .font(.caption2)
                 .foregroundStyle(.secondary)
+            if let sourceURL {
+                Link("Quelle & Lizenz", destination: sourceURL)
+                    .font(.caption2.weight(.semibold))
+            }
         }
         .accessibilityElement(children: .combine)
     }
@@ -238,9 +248,9 @@ private struct ReturnPointCard: View {
                 .frame(width: 38, height: 38)
                 .background(point.kind.mapColor, in: RoundedRectangle(cornerRadius: 11))
             VStack(alignment: .leading, spacing: 4) {
-                Text(verbatim: point.name).font(.headline)
-                Text(verbatim: "\(point.kind.title) · \(point.area)").font(.subheadline).foregroundStyle(.secondary)
-                Text("Beispieldaten · Öffnungsstatus nicht geprüft")
+                Text(verbatim: point.displayName).font(.headline)
+                Text(verbatim: "\(point.kind.title) · \(point.displayArea)").font(.subheadline).foregroundStyle(.secondary)
+                Text(verbatim: point.evidence.note)
                     .font(.caption).foregroundStyle(.secondary)
             }
             Spacer()

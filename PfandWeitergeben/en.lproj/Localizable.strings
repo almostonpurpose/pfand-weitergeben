@@ -1,7 +1,7 @@
 "In der Nähe" = "Nearby";
 "Aktivität" = "Activity";
-"Weitergeben" = "Pass it on";
-"Profil" = "Profile";
+"Weitergeben" = "Offer";
+"Profil" = "Settings";
 "Karte" = "Map";
 "Liste" = "List";
 "Darstellung" = "View";
@@ -42,7 +42,7 @@
 "detail.waiting" = "%d bottles are waiting";
 "detail.small_handover" = "a simple hand-off";
 "Treffpunkt" = "Meeting point";
-"detail.location_privacy" = "%@ · The map shows only the approximate area. The specific public meeting point is confirmed after acceptance.";
+"detail.location_privacy" = "%@ · The map shows only the approximate area. The exact collection place appears after acceptance.";
 "detail.instructions_from" = "Instructions from %@";
 "detail.no_instructions" = "No special instructions.";
 "Annehmen und Pfand behalten" = "Accept and keep the deposit";
@@ -54,7 +54,7 @@
 "Fertig" = "Done";
 "Sicher abholen" = "Collect safely";
 "Verstanden" = "Got it";
-"Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt." = "Meet in a public, well-lit place. Do not share private contact details. End the hand-off if anything feels wrong.";
+"Trefft euch an einem öffentlichen, gut beleuchteten Ort. Teile keine privaten Kontaktdaten. Brich die Übergabe ab, wenn sich etwas falsch anfühlt." = "For home collection, the collector stays at the door. Contactless collection or another agreed place is available too. End it if anything feels wrong.";
 "Warum möchtest du das Angebot melden?" = "Why do you want to report this offer?";
 "Unangemessener Inhalt" = "Inappropriate content";
 "Verdächtiges Verhalten" = "Suspicious behaviour";
@@ -63,7 +63,7 @@
 "Hinweis" = "Notice";
 "OK" = "OK";
 "Öffentlich und unkompliziert" = "Public and straightforward";
-"Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort." = "No doorstep and no exact home address. Stay at the agreed public place for the hand-off.";
+"Keine Haustür, keine exakte Wohnadresse. Bleibt für die Übergabe am vereinbarten öffentlichen Ort." = "Doorstep collection is available. The exact address appears only after acceptance, and contactless collection is available too.";
 "claim.success" = "Offer accepted. You can now find the agreed meeting point under Activity.";
 "report.acknowledged" = "Thank you. The report has been noted in demo mode.";
 "Pfand weitergeben" = "Pass on deposit bottles";
@@ -78,9 +78,9 @@
 "Von" = "From";
 "Bis" = "Until";
 "Wo trefft ihr euch?" = "Where will you meet?";
-"Öffentlicher Treffpunkt" = "Public meeting point";
+"Öffentlicher Treffpunkt" = "Collection place";
 "Bitte wählen" = "Please choose";
-"Warum keine Wohnadresse?" = "Why no home address?";
+"Warum keine Wohnadresse?" = "Collection from home";
 "Hinweise zur Übergabe" = "Hand-off instructions";
 "z. B. zwei blaue Taschen, bitte kurz melden" = "e.g. two blue bags, please message briefly";
 "Angebot veröffentlichen" = "Publish offer";
@@ -91,7 +91,7 @@
 "Noch eins erstellen" = "Create another";
 "Menschen in deiner Nähe können es jetzt annehmen und behalten den gesamten Pfandbetrag." = "People nearby can now accept it and keep the full deposit refund.";
 "Deine Privatsphäre" = "Your privacy";
-"Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung." = "The app never asks for your home. Choose a public place. Before acceptance, others see only the approximate area.";
+"Die App fragt nie nach deiner Wohnung. Wähle einen öffentlichen Ort. Vor der Annahme sehen andere nur die ungefähre Umgebung." = "You can enter a collection address or another place. Before acceptance, others see only the approximate area.";
 "Das hat nicht geklappt" = "That did not work";
 "Ausgewähltes Foto für die Pfandschätzung" = "Selected photo for the deposit estimate";
 "Foto aufnehmen" = "Take photo";
@@ -143,9 +143,9 @@
 "Demo-Daten zurücksetzen?" = "Reset demo data?";
 "Zurücksetzen" = "Reset";
 "Öffentlich treffen" = "Meet in public";
-"Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung." = "Choose a busy, well-lit place — never a home.";
+"Wähle einen belebten, gut beleuchteten Ort – nie eine Wohnung." = "Choose the doorstep, contactless collection or another place—whatever works for both sides.";
 "Privat bleiben" = "Stay private";
-"Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten." = "Do not share a phone number, exact address or payment details.";
+"Teile keine Telefonnummer, genaue Adresse oder Zahlungsdaten." = "Use only the app's protected address field for collection. Do not share extra contact or payment details.";
 "Abbrechen ist in Ordnung" = "It is fine to cancel";
 "Wenn sich etwas falsch anfühlt, geh nicht hin oder beende die Übergabe." = "If something feels wrong, do not go or end the hand-off.";
 "Melden" = "Report";
@@ -174,8 +174,8 @@
 "return.glass.karlmarx" = "Sample: glass bins at Karl-Marx-Platz";
 "return.glass.maybachufer" = "Sample: glass bins at Maybachufer";
 "return.glass.urbanstrasse" = "Sample: glass bins on Urbanstraße";
-"return.map_accessibility" = "%@, %@ in %@. Sample data.";
-"return.sample_hint" = "No real-time opening status; demo source.";
+"return.map_accessibility" = "%@, %@ in %@.";
+"return.sample_hint" = "No real-time opening status.";
 "€" = "€";
 
 /* Neutral creation and handover flow */
@@ -290,3 +290,37 @@
 "return.glass.moabit" = "Sample: glass bins in Moabit";
 "return.glass.wedding" = "Sample: glass bins in Wedding";
 "return.glass.schoeneberg" = "Sample: glass bins in Schöneberg";
+
+/* Open Berlin return-point snapshot */
+"Rückgabestellen in Berlin" = "Return points in Berlin";
+"OpenStreetMap-Daten; nicht vollständig und ohne Echtzeit-Öffnungszeiten." = "OpenStreetMap data; not complete and without real-time opening hours.";
+"Legende · offene Daten" = "Legend · open data";
+"Quelle & Lizenz" = "Source & licence";
+"return.osm_attribution" = "OpenStreetMap snapshot from %@ · © OpenStreetMap contributors · ODbL · not complete or live";
+"return.generic.supermarket" = "Supermarket";
+"return.generic.bottle_return" = "Bottle-return machine";
+"return.generic.glass" = "Glass-recycling container";
+"return.area.berlin" = "Berlin";
+"return.evidence.supermarket" = "Supermarket location in OpenStreetMap; check deposit returns and accepted containers on site.";
+"return.evidence.bottle_return" = "Explicitly tagged as a bottle-return machine in OpenStreetMap; check its status on site.";
+"return.evidence.glass" = "Tagged for glass-bottle recycling in OpenStreetMap; this is not a deposit-return machine.";
+
+/* Optional Berlin support contacts */
+"Hilfe in Berlin" = "Help in Berlin";
+"Direkte, freiwillige Kontakte für dich oder jemanden in deiner Nähe. Die App leitet keine Daten weiter und ruft niemanden automatisch an." = "Direct, optional contacts for you or someone nearby. The app does not pass on any data or call anyone automatically.";
+"Akute Hilfe" = "Urgent help";
+"Rettungsdienst · 112" = "Emergency medical services · 112";
+"Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist" = "For an acute health emergency or if someone is unresponsive";
+"Polizei · 110" = "Police · 110";
+"Bei unmittelbarer Bedrohung" = "For an immediate threat";
+"Wohnungsnotfallhilfe" = "Housing and homelessness support";
+"Kältebus · 030 690 333 690" = "Kältebus · 030 690 333 690";
+"Saisonaler Abenddienst der Berliner Stadtmission; nur anrufen, wenn die Person Hilfe annehmen möchte" = "Seasonal evening service run by Berliner Stadtmission; call only if the person wants help";
+"Kältehilfetelefon · 030 343 971 40" = "Kältehilfe phone · 030 343 971 40";
+"Informationen zu verfügbaren Schlafplätzen während der Kältehilfesaison" = "Information about available overnight places during the cold-weather season";
+"Kältehilfe-Wegweiser öffnen" = "Open the Kältehilfe guide";
+"Aktuelle Notübernachtungen, Tagesangebote und Beratung in Berlin" = "Current emergency accommodation, daytime services and advice in Berlin";
+"Soziale Wohnhilfe Berlin" = "Berlin social housing assistance";
+"Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "Local-district help with housing loss, rent debt or a lack of accommodation";
+"Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "Hours and capacity can change. Check the current guide or the linked service.";
+"Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "For an acute health emergency or if someone is unresponsive, call 112. For an immediate threat, call 110. The app is not an emergency service.";

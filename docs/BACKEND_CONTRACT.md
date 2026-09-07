@@ -2,13 +2,13 @@
 
 `OfferProviding` is the app-facing port. A later `CloudflareOfferStore` should preserve its semantics while adding async network operations and authenticated actor context.
 
-`ReturnPointProviding` is a separate read-only port for public return infrastructure. The bundled `DemoReturnPointProvider` is offline Berlin sample data only. A production provider may fetch supermarket deposit-return locations and public glass-recycling bins from properly licensed open/public sources, without changing the map or list UI.
+`ReturnPointProviding` is a separate read-only port for public return infrastructure. The bundled `BundledBerlinReturnPointProvider` decodes a dated OpenStreetMap/ODbL snapshot. A production provider may refresh the same categories from a licensed source without changing the map or list UI.
 
 ## Required guarantees
 
 - Claim is atomic: exactly one collector can move an open offer to claimed.
-- The public response never contains a private residence or precise owner coordinate.
-- A claim-specific hand-off location is visible only to the offer owner and accepted collector.
+- The public response never contains a private residence or precise owner coordinate; only a rounded discovery area is public.
+- A claim-specific home address or agreed hand-off location is visible only to the offer owner and accepted collector.
 - Every status mutation records actor, server timestamp, previous state and next state.
 - Reports are immutable submissions with a separate moderation status.
 - Cancellation is allowed only from open or claimed; collection only from claimed.
