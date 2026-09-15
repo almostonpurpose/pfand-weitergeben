@@ -148,10 +148,16 @@ struct Offer: Identifiable, Codable, Hashable, Sendable {
     var handoverMethod: HandoverMethod
     var privateAddress: String?
     var distanceMetres: Int
-    var ownerName: String
-    var collectorName: String?
+    var owner: Participant
+    var collector: Participant?
     var status: OfferStatus
     var createdAt: Date
+    /// Four digits created when someone accepts; entering them marks the offer collected.
+    var handoverCode: String? = nil
+
+    var isMine: Bool { owner.isMe }
+    var isCollectedByMe: Bool { collector?.isMe == true }
+    var involvesMe: Bool { isMine || isCollectedByMe }
 
     var bottleCount: Int { depositBreakdown.totalCount }
     var estimatedDeposit: Double { depositBreakdown.estimatedValue }

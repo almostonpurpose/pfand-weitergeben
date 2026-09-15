@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct PfandWeitergebenApp: App {
-    @StateObject private var store = DemoOfferStore()
+    @StateObject private var store = DemoOfferStore(persistence: .standard)
     @AppStorage("appLanguage") private var languageCode = AppLanguage.de.rawValue
 
     var body: some Scene {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0BD86467FCAF66FA0BD44C /* LocalIdentityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE979BF15E3083D40DB941F /* LocalIdentityTests.swift */; };
 		11FD6952D16105030F7F3CE4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ACA856FFED47AC5048DBBE /* ProfileView.swift */; };
 		169174923CE086E6202009E9 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE44B6056510DCFD46C12FF /* AppTheme.swift */; };
 		1A58E2D4085ECC1290554C4E /* OfferCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD738EB4B40CBD0E9D21AFE3 /* OfferCard.swift */; };
@@ -15,8 +16,11 @@
 		208CB9E81D5D9595D2155EB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DFE399282F7027ACB7EC98 /* InfoPlist.strings */; };
 		270464317C46D9F31650F16D /* PfandWeitergebenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6CCD4DABE7C8EFEA105A4 /* PfandWeitergebenApp.swift */; };
 		27655853F266AE22C1633FE6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 91A61C576D31BACEF45B556C /* PrivacyInfo.xcprivacy */; };
+		4001FADCB11F304BCEB16319 /* TestOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4652BE5CB10B81CC70AFA97 /* TestOffers.swift */; };
+		4090776DD2AC5FC3EEE7530E /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C7CB2F5F3D5EA146219851 /* Participant.swift */; };
 		45FE955FF3CDA7F738922DB2 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE826C542F1C7988EE181C5 /* Offer.swift */; };
 		834B97D2F37FD7C94A4995B4 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D266CB765D81FC7709799 /* DemoData.swift */; };
+		85219247643138E5A06458F3 /* OfferPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C86FDBC33F75620B92DFC5 /* OfferPersistenceTests.swift */; };
 		886017C43E8D69CA16AAAD1B /* ReturnPointProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A434417C0C783F1350B36 /* ReturnPointProviderTests.swift */; };
 		8B6AE09CF70011334DA7E62F /* CreateOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F34B4B13D4CADBA4E2DDC /* CreateOfferView.swift */; };
 		8E2C8454C1DDA1C34B7CDC2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A519DAF44EB161FAA046EC5F /* Localizable.strings */; };
@@ -25,6 +29,7 @@
 		A3B30A33E75F54F563563084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9539CD63FC2085431BCFE06F /* Assets.xcassets */; };
 		A827F39CDA4B730B78B90521 /* OfferValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB224078FAC29A82599C4055 /* OfferValidationTests.swift */; };
 		B09D5D748B9CE432F7E7B972 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912C2D3E29EA0B4C1FC4D3A /* L10n.swift */; };
+		B2227FF3866E89E54D2D7A3A /* OfferPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9332A0F162755C3C3D3068C /* OfferPersistence.swift */; };
 		C29AC210D738284B6E4E2446 /* OfferProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7890CA233F1766722C19BB6 /* OfferProviding.swift */; };
 		C9658E0027920885DB92CB6B /* ReturnPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A96ED95C75EE145BC212D7 /* ReturnPoint.swift */; };
 		C9CCFF84F5E62D4CC19AAAC7 /* OfferStateTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C148ED4A44DB54DAE23FF6D /* OfferStateTransitionTests.swift */; };
@@ -47,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09C86FDBC33F75620B92DFC5 /* OfferPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPersistenceTests.swift; sourceTree = "<group>"; };
 		1912C2D3E29EA0B4C1FC4D3A /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		29BE950D46F48826A3067FFB /* PhotoEstimateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEstimateTests.swift; sourceTree = "<group>"; };
 		2F7DEF2F67F75BD462578741 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -69,9 +75,12 @@
 		9CC0851629450D7FDD540C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9F661C2651CE5CFA9A9D9506 /* OfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailView.swift; sourceTree = "<group>"; };
 		A461D1300DA0E0D12E97820C /* PhotoEstimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEstimateView.swift; sourceTree = "<group>"; };
+		ACE979BF15E3083D40DB941F /* LocalIdentityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalIdentityTests.swift; sourceTree = "<group>"; };
 		BFE826C542F1C7988EE181C5 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		C1D689A67B5212495D0214F6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4652BE5CB10B81CC70AFA97 /* TestOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOffers.swift; sourceTree = "<group>"; };
 		C4ACA856FFED47AC5048DBBE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C9C7CB2F5F3D5EA146219851 /* Participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
 		CB867D3770EF084E3A614927 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		D4A96ED95C75EE145BC212D7 /* ReturnPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnPoint.swift; sourceTree = "<group>"; };
 		D726BC378E41C5B28765844C /* NearbyOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyOffersView.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		E1FD9D19A22C64A72203C8DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E37A3AB37F0DA100FB4D7BEE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E7890CA233F1766722C19BB6 /* OfferProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferProviding.swift; sourceTree = "<group>"; };
+		E9332A0F162755C3C3D3068C /* OfferPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPersistence.swift; sourceTree = "<group>"; };
 		F6A6CCD4DABE7C8EFEA105A4 /* PfandWeitergebenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PfandWeitergebenApp.swift; sourceTree = "<group>"; };
 		FD61B7980DBF2C266805EC77 /* berlin-return-points.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "berlin-return-points.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,11 +107,14 @@
 		16819729D40008970CE6758B /* PfandWeitergebenTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACE979BF15E3083D40DB941F /* LocalIdentityTests.swift */,
 				33306BE6D7D23E0FFBE29599 /* LocalizationTests.swift */,
+				09C86FDBC33F75620B92DFC5 /* OfferPersistenceTests.swift */,
 				4C148ED4A44DB54DAE23FF6D /* OfferStateTransitionTests.swift */,
 				DB224078FAC29A82599C4055 /* OfferValidationTests.swift */,
 				29BE950D46F48826A3067FFB /* PhotoEstimateTests.swift */,
 				3D6A434417C0C783F1350B36 /* ReturnPointProviderTests.swift */,
+				C4652BE5CB10B81CC70AFA97 /* TestOffers.swift */,
 			);
 			path = PfandWeitergebenTests;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 			children = (
 				312D266CB765D81FC7709799 /* DemoData.swift */,
 				59F50A4892C49FFEF6E1EB5F /* DemoOfferStore.swift */,
+				E9332A0F162755C3C3D3068C /* OfferPersistence.swift */,
 				E7890CA233F1766722C19BB6 /* OfferProviding.swift */,
 			);
 			path = Data;
@@ -229,6 +243,7 @@
 			children = (
 				BFE826C542F1C7988EE181C5 /* Offer.swift */,
 				5B0A771108A100ED4924C03A /* OfferDraft.swift */,
+				C9C7CB2F5F3D5EA146219851 /* Participant.swift */,
 				D4A96ED95C75EE145BC212D7 /* ReturnPoint.swift */,
 			);
 			path = Domain;
@@ -283,7 +298,7 @@
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					2F03BE62C8D6F99F31BEF093 = {
-						DevelopmentTeam = "";
+						DevelopmentTeam = 92CZFFF7NY;
 						ProvisioningStyle = Automatic;
 					};
 					D036C75DEE9E4923B8CCEE17 = {
@@ -335,11 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0BD86467FCAF66FA0BD44C /* LocalIdentityTests.swift in Sources */,
 				E17479FEFA33262D96E2B7C3 /* LocalizationTests.swift in Sources */,
+				85219247643138E5A06458F3 /* OfferPersistenceTests.swift in Sources */,
 				C9CCFF84F5E62D4CC19AAAC7 /* OfferStateTransitionTests.swift in Sources */,
 				A827F39CDA4B730B78B90521 /* OfferValidationTests.swift in Sources */,
 				FC84B883661D247DAACAA20A /* PhotoEstimateTests.swift in Sources */,
 				886017C43E8D69CA16AAAD1B /* ReturnPointProviderTests.swift in Sources */,
+				4001FADCB11F304BCEB16319 /* TestOffers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +376,9 @@
 				1A58E2D4085ECC1290554C4E /* OfferCard.swift in Sources */,
 				F5AEEAEADF2505BD6F85938C /* OfferDetailView.swift in Sources */,
 				D38DBF280BC281F044603ADC /* OfferDraft.swift in Sources */,
+				B2227FF3866E89E54D2D7A3A /* OfferPersistence.swift in Sources */,
 				C29AC210D738284B6E4E2446 /* OfferProviding.swift in Sources */,
+				4090776DD2AC5FC3EEE7530E /* Participant.swift in Sources */,
 				270464317C46D9F31650F16D /* PfandWeitergebenApp.swift in Sources */,
 				1D7D812FF4FD83A1A883E8A6 /* PhotoEstimateView.swift in Sources */,
 				11FD6952D16105030F7F3CE4 /* ProfileView.swift in Sources */,
@@ -476,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 92CZFFF7NY;
 				INFOPLIST_FILE = PfandWeitergeben/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 92CZFFF7NY;
 				INFOPLIST_FILE = PfandWeitergeben/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

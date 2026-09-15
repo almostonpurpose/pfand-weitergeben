@@ -122,7 +122,6 @@
 "activity.you_collect" = "You collect and keep the deposit: about %@";
 "activity.collector_collects" = "%@ collects and keeps the deposit.";
 "activity.not_claimed" = "Not accepted yet.";
-"Als abgeholt markieren" = "Mark as collected";
 "Abholung absagen" = "Cancel collection";
 "Angebot zurückziehen" = "Withdraw offer";
 "Demo-Profil" = "Demo profile";
@@ -138,7 +137,6 @@
 "Demo" = "Demo";
 "Demo-Daten zurücksetzen" = "Reset demo data";
 "Datenspeicherung" = "Data storage";
-"Nur im Arbeitsspeicher" = "In memory only";
 "Version" = "Version";
 "Demo-Daten zurücksetzen?" = "Reset demo data?";
 "Zurücksetzen" = "Reset";
@@ -248,8 +246,6 @@
 /* Settings and account boundary */
 "Konto" = "Account";
 "Modus" = "Mode";
-"Lokale Demo ohne Konto" = "Local demo without an account";
-"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "In production, a lightweight account is required to create or accept offers. Public browsing remains available without signing in.";
 "App-Einstellungen" = "App settings";
 "An der Tür bleiben" = "Stay at the door";
 "Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein." = "The collector stays outside the home. Do not let anyone inside.";
@@ -324,3 +320,18 @@
 "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "Local-district help with housing loss, rent debt or a lack of accommodation";
 "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "Hours and capacity can change. Check the current guide or the linked service.";
 "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "For an acute health emergency or if someone is unresponsive, call 112. For an immediate threat, call 110. The app is not an emergency service.";
+
+/* Local identity and hand-over code */
+"actor.neighbour" = "Neighbour";
+"error.handover_code" = "The pickup code doesn't match. Please check the four digits.";
+"claim.success_code" = "Offer accepted. Your pickup code is %@. You'll find it under Activity.";
+"account.mode_local" = "Local, no account";
+"storage.on_device" = "On this device";
+"Abholung bestätigen" = "Confirm pickup";
+"Abholcode" = "Pickup code";
+"Bestätigen" = "Confirm";
+"Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn." = "Enter the four-digit pickup code. The person collecting knows it.";
+"Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt." = "Say the code at the handover. That confirms the pickup.";
+"Bestätige mit diesem Code, sobald du den Beutel geholt hast." = "Confirm with this code once you've picked up the bag.";
+"Anzeigename" = "Display name";
+"Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe." = "No account, no password: your name only appears on your offers and pickups on this device. A four-digit pickup code confirms every handover.";

@@ -138,10 +138,11 @@ struct PhotoEstimateResult: Equatable {
 }
 
 enum PhotoEstimateService {
+    /// Deliberately rough: the heuristic looks for upright, container-shaped dark silhouettes.
+    /// It does not recognise deposit classes and is not calibrated for field use.
     static func estimate(from image: UIImage, fallback: Int) -> PhotoEstimateResult {
-        guard let cgImage = image.cgImage else {
-            return PhotoEstimateResult(count: min(max(1, fallback), 200), usedFallback: true)
-        }
+        let bounded = PhotoEstimateResult(count: min(max(1, fallback), 200), usedFallback: true)
+        guard let cgImage = image.cgImage else { return bounded }
 
         let request = VNDetectContoursRequest()
         request.maximumImageDimension = 512
@@ -149,26 +150,63 @@ enum PhotoEstimateService {
         request.detectsDarkOnLight = true
 
         do {
-            try VNImageRequestHandler(cgImage: cgImage, orientation: .up).perform([request])
-            guard let observation = request.results?.first else {
-                return PhotoEstimateResult(count: min(max(1, fallback), 200), usedFallback: true)
-            }
-            let contours = flatten(observation.topLevelContours)
-            let candidates = contours.filter { contour in
-                let box = contour.normalizedPath.boundingBox
-                guard box.width > 0.035, box.height > 0.09, box.width < 0.5, box.height < 0.95 else { return false }
-                let ratio = box.height / max(box.width, 0.001)
-                return ratio > 1.25 && ratio < 7 && box.width * box.height > 0.008
-            }
-            let count = min(max(candidates.count, 1), 60)
-            return PhotoEstimateResult(count: count, usedFallback: candidates.isEmpty)
+            // Camera photos carry their rotation as metadata. Vision has to be told about it,
+            // otherwise an upright can is analysed lying on its side and never matches.
+            let orientation = CGImagePropertyOrientation(image.imageOrientation)
+            try VNImageRequestHandler(cgImage: cgImage, orientation: orientation).perform([request])
+            guard let observation = request.results?.first else { return bounded }
+
+            let shapes = flatten(observation.topLevelContours)
+                .map { $0.normalizedPath.boundingBox }
+                .filter(isContainerShaped)
+            let containers = distinctContainers(shapes)
+            guard !containers.isEmpty else { return bounded }
+            return PhotoEstimateResult(count: min(containers.count, 60), usedFallback: false)
         } catch {
-            return PhotoEstimateResult(count: min(max(1, fallback), 200), usedFallback: true)
+            return bounded
         }
     }
 
     private static func flatten(_ contours: [VNContour]) -> [VNContour] {
         contours + contours.flatMap { flatten($0.childContours) }
+    }
+
+    private static func isContainerShaped(_ box: CGRect) -> Bool {
+        guard box.width > 0.035, box.height > 0.09, box.width < 0.85, box.height < 0.95 else { return false }
+        let ratio = box.height / max(box.width, 0.001)
+        return ratio > 1.25 && ratio < 7 && box.width * box.height > 0.008
+    }
+
+    /// A printed label, a highlight or a shadow produces its own contour inside or across the
+    /// container that carries it. Keep only the largest shape of each overlapping group so that
+    /// one can counts once.
+    private static func distinctContainers(_ boxes: [CGRect]) -> [CGRect] {
+        var kept: [CGRect] = []
+        for box in boxes.sorted(by: { $0.width * $0.height > $1.width * $1.height }) {
+            let coveredByLarger = kept.contains { larger in
+                let overlap = larger.intersection(box)
+                guard !overlap.isNull, !overlap.isEmpty else { return false }
+                return (overlap.width * overlap.height) / (box.width * box.height) > 0.5
+            }
+            if !coveredByLarger { kept.append(box) }
+        }
+        return kept
+    }
+}
+
+private extension CGImagePropertyOrientation {
+    init(_ orientation: UIImage.Orientation) {
+        switch orientation {
+        case .up: self = .up
+        case .upMirrored: self = .upMirrored
+        case .down: self = .down
+        case .downMirrored: self = .downMirrored
+        case .left: self = .left
+        case .leftMirrored: self = .leftMirrored
+        case .right: self = .right
+        case .rightMirrored: self = .rightMirrored
+        @unknown default: self = .up
+        }
     }
 }
 

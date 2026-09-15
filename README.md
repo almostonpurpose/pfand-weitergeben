@@ -2,7 +2,7 @@
 
 Eine native iPhone-App, über die Nachbar:innen Pfandflaschen unkompliziert weitergeben: Eine Person stellt ein Angebot ein, eine andere nimmt es an, holt die Behälter ab und **behält den vollständigen Pfandbetrag**.
 
-Der aktuelle Stand ist ein polierter, vollständig lokaler Prototyp. Er startet ohne Konto, Server oder Zugangsdaten mit klar gekennzeichneten Demo-Angeboten. Die öffentlichen Rückgabestellen sind dagegen ein lizenzierter OpenStreetMap-Datenschnappschuss für ganz Berlin.
+Der aktuelle Stand ist ein polierter, vollständig lokaler Prototyp. Er startet ohne Konto, Server oder Zugangsdaten mit klar gekennzeichneten Demo-Angeboten. Eigene Angebote, Annahmen und Abholcodes bleiben auf dem Gerät gespeichert und überleben einen Neustart. Die öffentlichen Rückgabestellen sind dagegen ein lizenzierter OpenStreetMap-Datenschnappschuss für ganz Berlin.
 
 ## Öffnen und starten
 
@@ -18,14 +18,15 @@ Für ein eigenes Gerät unter **Signing & Capabilities** das persönliche Apple-
 - Zwei optionale, klar unterscheidbare Kartenebenen mit 177 realen OpenStreetMap-Standorten für Supermärkte/Pfandrückgabe und öffentliche Glascontainer, jeweils auch als gefilterte Liste und mit Legende
 - Angebot erstellen: getrennte Mengen für 8-, 15- und 25-Cent-Pfand, Beutelgröße, 15-Minuten-Zeitfenster, Hinweise und Abholort
 - Detailansicht mit gut sichtbarem Pfand-Hinweis und Annahme
-- Aktivitätsansicht für `verfügbar → vereinbart → abgeholt` sowie Stornierung
+- Aktivitätsansicht für `verfügbar → vereinbart → abgeholt` sowie Stornierung; der Schritt zu `abgeholt` verlangt den vierstelligen Abholcode
+- Übergabe ohne Konto: frei wählbarer Anzeigename unter **Einstellungen → Konto**, zufällige lokale Teilnehmer-ID, kein Passwort, kein Server
 - Sicherheitszentrum, Angebotsmeldung, Gemeinschaftsregeln und Einstellungen
 - Vollständige App-Sprache in Deutsch, Englisch, Arabisch und Türkisch; Deutsch ist Standard, Arabisch nutzt RTL-Layout
 - In-App-Sprachwahl unter **Einstellungen → Sprache**
 - Schnelle lokale Foto-Schätzung per Kamera oder Fotomediathek mit bearbeitbarer grober Gesamtzahl; die Person verteilt sie anschliessend selbst auf 8, 15 und 25 Cent
 - Abholung an der Haustür, kontaktlose Ablage vor der Tür oder anderer vereinbarter Ort; die genaue Adresse erscheint erst nach Annahme
 - Optionaler Bereich **Hilfe in Berlin** mit 112/110, Kältebus, Kältehilfetelefon, aktuellem Kältehilfe-Wegweiser und Sozialer Wohnhilfe
-- Lokaler Demo-Speicher hinter dem `OfferProviding`-Protokoll
+- Lokaler Speicher (JSON in Application Support) hinter dem `OfferProviding`-Protokoll; unberührte Demo-Angebote erhalten beim Start frische Zeitfenster
 - Lizenzierter Berliner OpenStreetMap-Snapshot hinter dem austauschbaren `ReturnPointProviding`-Protokoll
 - SwiftUI-Previews, Demo-Daten, Datenschutzmanifest und Unit-Tests
 
@@ -57,7 +58,7 @@ Das Demo fordert weiterhin keinen Gerätestandort an. Die sichtbaren Rückgabest
 
 ## Foto-Schätzung und Datenschutz
 
-Die Angebotserstellung kann ein Foto aufnehmen oder über Apples systemeigenen Photo Picker auswählen. Eine lokale Vision-Konturanalyse liefert einen bewusst groben Startwert für die Gesamtzahl. Sie erkennt keine Pfandklasse. Die Person verteilt die Menge selbst auf Mehrweg 8 Cent, Mehrweg 15 Cent und Einweg 25 Cent; daraus wird der Wert berechnet.
+Die Angebotserstellung kann ein Foto aufnehmen oder über Apples systemeigenen Photo Picker auswählen. Eine lokale Vision-Konturanalyse liefert einen bewusst groben Startwert für die Gesamtzahl. Sie berücksichtigt die Ausrichtung des Kamerafotos und fasst Konturen, die innerhalb oder über einer grösseren Behälterkontur liegen (Etikett, Aufdruck, Reflexion, Schatten), zu einem Behälter zusammen; vorher zählte jede dieser Konturen einzeln, und eine einzelne Dose ergab mehrere Behälter. Sie erkennt keine Pfandklasse. Die Person verteilt die Menge selbst auf Mehrweg 8 Cent, Mehrweg 15 Cent und Einweg 25 Cent; daraus wird der Wert berechnet.
 
 - Das Foto wird nicht hochgeladen und nicht im Angebot gespeichert.
 - Die App behauptet keine genaue Flaschen- oder Pfanderkennung.
@@ -86,16 +87,29 @@ In Xcode mit `⌘U` oder auf der Kommandozeile:
 xcodebuild test \
   -project PfandWeitergeben.xcodeproj \
   -scheme PfandWeitergeben \
-  -destination 'platform=iOS Simulator,name=iPhone 16 Pro'
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.4.1'
 ```
 
-Getestet werden Validierung, erlaubte/verbotene Statusübergänge, Foto-Fallback, Pfandberechnung, Haustür-/Kontaktlos-Logik, Vollständigkeit der vier Sprachressourcen sowie Umfang, Lizenzkennzeichnung und Berliner Plausibilität der Rückgabestellen.
+Ohne `OS=` löst Xcode `latest` auf; ein Gerätename muss in dieser Runtime existieren (iPhone 16 Pro gibt es nur unter iOS 18.3.1).
+
+Getestet werden Validierung, erlaubte/verbotene Statusübergänge, Abholcode-Pflicht (auch kontaktlos), lokale Identität und Anzeigenamen, Persistenz-Roundtrip mit Demo-Merge und Neustart, Foto-Zählung (eine Dose mit Etikett/Schatten, drei Dosen, Nahaufnahme, gedrehtes Kamerafoto), Foto-Fallback, Pfandberechnung, Haustür-/Kontaktlos-Logik, Vollständigkeit der vier Sprachressourcen sowie Umfang, Lizenzkennzeichnung und Berliner Plausibilität der Rückgabestellen.
 
 ## Lokal verifiziert
 
-Stand 7. September 2026 wurde das Projekt mit Xcode 26.4 für einen **iPhone 16 Pro Simulator (iOS 18.3.1)** neu gebaut, installiert und eigenständig gestartet. Die vollständige XCTest-Suite bestand **20 von 20 Tests**. Die vier `Localizable.strings`-Kataloge enthalten jeweils **309 identische Schlüssel**. Deutsch sowie Arabisch im echten RTL-Layout wurden im laufenden Simulator visuell geprüft. Der mitgelieferte OSM-Provider lädt 177 Punkte; Tests prüfen die Aufteilung, Berlin-Koordinaten, Evidenzhinweise und Attribution.
+Stand 15. September 2026 wurde das Projekt mit Xcode 26.4.1 für einen **iPhone 17 Pro Simulator (iOS 26.4.1)** neu gebaut und die vollständige XCTest-Suite bestand **34 von 34 Tests**. Die vier `Localizable.strings`-Kataloge enthalten jeweils **318 identische Schlüssel**. Ein arm64-Gerätebuild wurde mit dem Entwicklerteam signiert und auf einem angeschlossenen iPhone installiert. Die neuen Abhol- und Einstellungsansichten wurden im laufenden Simulator auf Deutsch visuell geprüft (falscher Code abgelehnt, richtiger Code führt zu „Abgeholt“); die Arabisch/RTL-Sichtprüfung stammt vom 7. September und umfasst diese Ansichten noch nicht. Der mitgelieferte OSM-Provider lädt 177 Punkte; Tests prüfen die Aufteilung, Berlin-Koordinaten, Evidenzhinweise und Attribution.
 
-Damit verifiziert sind Kompilierung, App-Start, Haustür-/Kontaktlos-Fluss, Status- und Validierungslogik, 8-/15-/25-Cent-Berechnung, lokaler Foto-Fallback, Sprachressourcen, RTL sowie die lizenzierte Rückgabedaten-Grenze. Nicht verifiziert sind reale Kamera-Erkennungsqualität, Muttersprachler-Lektorat, Vollständigkeit/Live-Status der OSM-Daten, Backendbetrieb zwischen mehreren Geräten oder App-Store-Freigabe.
+Damit verifiziert sind Kompilierung für Simulator und Gerät, App-Start, Haustür-/Kontaktlos-Fluss, Abholcode-Pflicht, lokale Identität, Persistenz über einen Neustart, Status- und Validierungslogik, 8-/15-/25-Cent-Berechnung, die Foto-Zählung auf synthetischen Bildern (eine Dose mit Etikett und Schatten, drei Dosen, Nahaufnahme, gedrehtes Kamerafoto), Sprachressourcen, die RTL-Kennzeichnung (Unit-Test) sowie die lizenzierte Rückgabedaten-Grenze. Nicht verifiziert sind die Zählgenauigkeit auf echten Fotos (die Heuristik bleibt unkalibriert; behoben ist die Mehrfachzählung verschachtelter Konturen und die ignorierte Bildausrichtung), Muttersprachler-Lektorat, Vollständigkeit/Live-Status der OSM-Daten, Backendbetrieb zwischen mehreren Geräten oder App-Store-Freigabe.
+
+## Übergabe ohne Konto
+
+Der Prototyp verwaltet die Übergabe zwischen zwei Menschen ohne Anmeldung:
+
+1. Beim Annehmen erzeugt die App einen vierstelligen **Abholcode** und speichert ihn am Angebot. Nur die abholende Person sieht ihn unter **Aktivität**.
+2. An der Tür nennt die abholende Person den Code. **Abholung bestätigen** verlangt ihn; ein falscher Code lässt den Status auf `vereinbart`.
+3. Bei kontaktloser Ablage bestätigt die abholende Person selbst mit ihrem Code, sobald der Beutel geholt ist.
+4. Wer ein Angebot erstellt oder annimmt, wird über eine zufällige lokale Teilnehmer-ID erkannt; der Anzeigename aus den Einstellungen steht auf Angeboten und Abholungen. Ohne Namen erscheint „Nachbar:in“.
+
+Ein echtes Konto bringt in einem Ein-Geräte-Prototyp nichts: Erst wenn zwei Telefone dasselbe Angebot sehen sollen, braucht es den Cloudflare-Dienst, und dann übernimmt Better Auth auf D1 genau die Rolle, die hier die lokale Teilnehmer-ID spielt.
 
 ## Konten in der Produktionsfassung
 

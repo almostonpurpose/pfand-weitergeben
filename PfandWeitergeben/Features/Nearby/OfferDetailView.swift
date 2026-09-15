@@ -34,7 +34,7 @@ struct OfferDetailView: View {
                                 }
                             }
 
-                            DetailSection(title: L10n.string("detail.instructions_from", displayActorName(offer.ownerName)), symbol: "text.bubble") {
+                            DetailSection(title: L10n.string("detail.instructions_from", offer.owner.displayName), symbol: "text.bubble") {
                                 Text(offer.displayInstructions.isEmpty ? L10n.string("detail.no_instructions") : offer.displayInstructions)
                             }
 
@@ -89,8 +89,8 @@ struct OfferDetailView: View {
 
     private func claim() {
         do {
-            try store.claim(id: offerID, collectorName: "Du")
-            errorMessage = L10n.string("claim.success")
+            let code = try store.claim(id: offerID)
+            errorMessage = L10n.string("claim.success_code", code)
         } catch { errorMessage = error.localizedDescription }
     }
 
@@ -111,10 +111,6 @@ private struct DetailSection<Content: View>: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-}
-
-private func displayActorName(_ name: String) -> String {
-    name == "Du" ? L10n.string("actor.you") : name
 }
 
 private struct SafetyNote: View {

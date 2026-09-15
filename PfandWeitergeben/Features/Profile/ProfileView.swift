@@ -5,6 +5,7 @@ struct SettingsView: View {
     @AppStorage("appLanguage") private var appLanguage = AppLanguage.de.rawValue
     @AppStorage("useLargeMapMarkers") private var useLargeMapMarkers = true
     @AppStorage("notifyClaims") private var notifyClaims = true
+    @AppStorage(LocalIdentity.displayNameKey) private var displayName = ""
     @State private var showingReset = false
 
     var body: some View {
@@ -13,8 +14,11 @@ struct SettingsView: View {
                 WarmBackground()
                 List {
                     Section("Konto") {
-                        LabeledContent("Modus", value: "Lokale Demo ohne Konto")
-                        Text("In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar.")
+                        TextField("Anzeigename", text: $displayName)
+                            .textContentType(.nickname)
+                            .textInputAutocapitalization(.words)
+                        LabeledContent("Modus", value: L10n.string("account.mode_local"))
+                        Text("Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe.")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }
@@ -38,7 +42,7 @@ struct SettingsView: View {
 
                     Section("Demo") {
                         Button("Demo-Daten zurücksetzen", role: .destructive) { showingReset = true }
-                        LabeledContent("Datenspeicherung", value: "Nur im Arbeitsspeicher")
+                        LabeledContent("Datenspeicherung", value: L10n.string("storage.on_device"))
                         LabeledContent("Version", value: "1.0 (1)")
                     }
                 }

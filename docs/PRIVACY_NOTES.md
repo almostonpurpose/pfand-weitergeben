@@ -18,7 +18,8 @@
 
 ## Lokale Daten
 
-- Angebote und Statusänderungen existieren nur im Arbeitsspeicher und gehen beim Neustart verloren.
+- Angebote, Annahmen und Abholcodes werden als JSON-Datei im Application-Support-Verzeichnis der App gespeichert; Anzeigename, Sprache und die zufällige lokale Teilnehmer-ID liegen in UserDefaults. Die App überträgt nichts davon; Geräte-Backups (iCloud, Finder) können die Datei und die UserDefaults enthalten. „Demo-Daten zurücksetzen“ löscht die Datei. Eine unlesbare Datei wird beim Start verworfen, damit ein Schemawechsel nie den App-Start verhindert.
+- Die Teilnehmer-ID ist eine beim ersten Start erzeugte UUID ohne Personenbezug; sie wird niemandem angezeigt.
 - Es gibt im Prototyp keine Konten, Analyse-SDKs, Tracker, Push-Tokens oder eigenen Netzwerkendpunkte.
 - Die Links unter „Hilfe in Berlin“ öffnen Telefon oder Browser nur nach einer ausdrücklichen Berührung. Die App übermittelt dabei selbst keine Profildaten oder Angebotsdaten und löst keinen automatischen Kontakt aus.
-- Das Datenschutzmanifest erklärt deshalb keine Datenerhebung und kein Tracking. Vor jeder Distribution müssen Implementierung, App-Store-Angaben und diese Notizen erneut gegeneinander geprüft werden.
+- Das Datenschutzmanifest erklärt deshalb keine Datenerhebung und kein Tracking; es deklariert den UserDefaults-Zugriff mit Begründung CA92.1 (App-eigene Einstellungen). Vor jeder Distribution müssen Implementierung, App-Store-Angaben und diese Notizen erneut gegeneinander geprüft werden.

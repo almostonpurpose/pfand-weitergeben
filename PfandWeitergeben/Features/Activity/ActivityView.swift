@@ -4,9 +4,9 @@ struct ActivityView: View {
     @ObservedObject var store: DemoOfferStore
     @State private var errorMessage: String?
 
-    private var active: [Offer] { store.offers.filter { $0.status == .claimed } }
-    private var mine: [Offer] { store.offers.filter { $0.ownerName == "Du" } }
-    private var history: [Offer] { store.offers.filter { [.collected, .cancelled].contains($0.status) } }
+    private var active: [Offer] { store.offers.filter { $0.status == .claimed && $0.involvesMe } }
+    private var mine: [Offer] { store.offers.filter { $0.isMine && $0.status == .open } }
+    private var history: [Offer] { store.offers.filter { [.collected, .cancelled].contains($0.status) && $0.involvesMe } }
 
     var body: some View {
         NavigationStack {
@@ -75,6 +75,8 @@ private struct ActiveOfferCard: View {
     let offer: Offer
     @ObservedObject var store: DemoOfferStore
     @Binding var errorMessage: String?
+    @State private var showingConfirmation = false
+    @State private var enteredCode = ""
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -89,27 +91,27 @@ private struct ActiveOfferCard: View {
             Divider()
             Label(locationText, systemImage: offer.handoverMethod.symbol)
                 .font(.subheadline)
-            if offer.collectorName == "Du" {
+            if offer.isCollectedByMe {
                 Text(L10n.string("activity.you_collect", L10n.currency(offer.estimatedDeposit)))
                     .font(.subheadline.weight(.semibold)).foregroundStyle(AppTheme.green)
-            } else if offer.ownerName == "Du" {
-                Text(offer.collectorName.map { L10n.string("activity.collector_collects", displayActorName($0)) } ?? L10n.string("activity.not_claimed"))
+            } else if offer.isMine {
+                Text(offer.collector.map { L10n.string("activity.collector_collects", $0.displayName) } ?? L10n.string("activity.not_claimed"))
                     .font(.subheadline).foregroundStyle(AppTheme.green)
             }
 
             if offer.status == .claimed {
-                Button("Als abgeholt markieren") {
-                    do { try store.markCollected(id: offer.id) }
-                    catch { errorMessage = error.localizedDescription }
+                if offer.isCollectedByMe, let code = offer.handoverCode {
+                    HandoverCodeBadge(code: code, contactless: offer.handoverMethod == .leaveAtDoor)
                 }
-                .buttonStyle(PrimaryActionButtonStyle())
+                Button("Abholung bestätigen") { enteredCode = ""; showingConfirmation = true }
+                    .buttonStyle(PrimaryActionButtonStyle())
                 Button("Abholung absagen", role: .destructive) {
                     do { try store.cancel(id: offer.id) }
                     catch { errorMessage = error.localizedDescription }
                 }
                 .font(.subheadline)
                 .frame(maxWidth: .infinity)
-            } else if offer.status == .open && offer.ownerName == "Du" {
+            } else if offer.status == .open && offer.isMine {
                 Button("Angebot zurückziehen", role: .destructive) {
                     do { try store.cancel(id: offer.id) }
                     catch { errorMessage = error.localizedDescription }
@@ -118,16 +120,55 @@ private struct ActiveOfferCard: View {
             }
         }
         .cardStyle()
+        .alert("Abholung bestätigen", isPresented: $showingConfirmation) {
+            TextField("Abholcode", text: $enteredCode)
+                .keyboardType(.numberPad)
+            Button("Bestätigen") { confirmCollection() }
+            Button("Abbrechen", role: .cancel) { enteredCode = "" }
+        } message: {
+            Text("Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn.")
+        }
+    }
+
+    private func confirmCollection() {
+        do {
+            try store.markCollected(id: offer.id, handoverCode: enteredCode)
+            enteredCode = ""
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
 
     private var locationText: String {
-        if offer.status == .claimed || offer.ownerName == "Du" {
+        if offer.status == .claimed || offer.isMine {
             return L10n.string("activity.confirmed_location", offer.confirmedPickupLocation)
         }
         return L10n.string("activity.approximate_location", offer.meetingPoint.neighbourhood)
     }
 }
 
-private func displayActorName(_ name: String) -> String {
-    name == "Du" ? L10n.string("actor.you") : name
+private struct HandoverCodeBadge: View {
+    let code: String
+    let contactless: Bool
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Label("Abholcode", systemImage: "number.circle")
+                    .font(.subheadline.weight(.semibold))
+                Spacer()
+                Text(code)
+                    .font(.title3.weight(.bold).monospacedDigit())
+                    .foregroundStyle(AppTheme.darkGreen)
+            }
+            Text(LocalizedStringKey(contactless
+                ? "Bestätige mit diesem Code, sobald du den Beutel geholt hast."
+                : "Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt."))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+        }
+        .padding(12)
+        .background(AppTheme.sageTint, in: RoundedRectangle(cornerRadius: 12))
+        .accessibilityElement(children: .combine)
+    }
 }

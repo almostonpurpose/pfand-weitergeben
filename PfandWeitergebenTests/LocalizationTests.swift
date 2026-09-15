@@ -38,7 +38,19 @@ final class LocalizationTests: XCTestCase {
             "return.osm_attribution",
             "Hilfe in Berlin",
             "Kältebus · 030 690 333 690",
-            "Kältehilfe-Wegweiser öffnen"
+            "Kältehilfe-Wegweiser öffnen",
+            "Abholung bestätigen",
+            "Abholcode",
+            "Anzeigename",
+            "Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn.",
+            "Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt.",
+            "Bestätige mit diesem Code, sobald du den Beutel geholt hast.",
+            "Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe.",
+            "error.handover_code",
+            "claim.success_code",
+            "actor.neighbour",
+            "account.mode_local",
+            "storage.on_device"
         ]
         for language in ["de", "en", "ar", "tr"] {
             guard let path = Bundle.main.path(forResource: "Localizable", ofType: "strings", inDirectory: nil, forLocalization: language),

@@ -122,7 +122,6 @@
 "activity.you_collect" = "Sen teslim alıp depozitoyu tutarsın: yaklaşık %@";
 "activity.collector_collects" = "%@ teslim alıp depozitoyu tutar.";
 "activity.not_claimed" = "Henüz kabul edilmedi.";
-"Als abgeholt markieren" = "Teslim alındı olarak işaretle";
 "Abholung absagen" = "Teslim almayı iptal et";
 "Angebot zurückziehen" = "Teklifi geri çek";
 "Demo-Profil" = "Demo profili";
@@ -138,7 +137,6 @@
 "Demo" = "Demo";
 "Demo-Daten zurücksetzen" = "Demo verilerini sıfırla";
 "Datenspeicherung" = "Veri saklama";
-"Nur im Arbeitsspeicher" = "Yalnızca bellekte";
 "Version" = "Sürüm";
 "Demo-Daten zurücksetzen?" = "Demo verileri sıfırlansın mı?";
 "Zurücksetzen" = "Sıfırla";
@@ -205,11 +203,9 @@
 "Gesamt" = "Toplam";
 "Grobe Gesamtzahl" = "Yaklaşık toplam adet";
 "Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten." = "Bu kaba bir tahmindir ve yanlış olabilir. Toplamı düzelt ve aşağıda depozito türlerine dağıt.";
-"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "Canlı sürümde teklif oluşturmak veya kabul etmek için sade bir hesap gerekir. Herkese açık arama giriş yapmadan kullanılabilir.";
 "Keine aktiven Abholungen" = "Etkin teslim alma yok";
 "Kontaktlos abholen" = "Temassız teslim alma";
 "Konto" = "Hesap";
-"Lokale Demo ohne Konto" = "Hesapsız yerel demo";
 "Mehrwegpfand beträgt üblicherweise 8 oder 15 Cent; Einwegpfand 25 Cent. Prüfe im Zweifel das Etikett." = "Yeniden kullanılabilir ambalaj depozitosu genellikle 8 veya 15 sent, tek kullanımlık depozito 25 senttir. Emin değilsen etiketi kontrol et.";
 "Modus" = "Mod";
 "Nimm ein Angebot an oder erstelle ein Angebot." = "Bir teklifi kabul et veya teklif oluştur.";
@@ -315,3 +311,18 @@
 "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "Ev kaybı, kira borcu veya barınacak yer olmaması durumunda ilçe desteği";
 "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "Saatler ve kapasite değişebilir. Güncel rehberi veya bağlantılı hizmeti kontrol et.";
 "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "Acil sağlık tehlikesinde veya biri tepki vermiyorsa 112'yi ara. Acil bir tehditte 110'u ara. Uygulama bir acil durum hizmeti değildir.";
+
+/* Local identity and hand-over code */
+"actor.neighbour" = "Komşu";
+"error.handover_code" = "Teslim alma kodu eşleşmiyor. Lütfen dört haneyi kontrol et.";
+"claim.success_code" = "Teklif kabul edildi. Teslim alma kodun %@. Onu Etkinlik altında bulabilirsin.";
+"account.mode_local" = "Yerel, hesapsız";
+"storage.on_device" = "Bu cihazda";
+"Abholung bestätigen" = "Teslim almayı onayla";
+"Abholcode" = "Teslim alma kodu";
+"Bestätigen" = "Onayla";
+"Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn." = "Dört haneli teslim alma kodunu gir. Teslim alan kişi bu kodu biliyor.";
+"Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt." = "Teslimatta kodu söyle. Böylece teslim alma onaylanır.";
+"Bestätige mit diesem Code, sobald du den Beutel geholt hast." = "Poşeti aldıktan sonra bu kodla onayla.";
+"Anzeigename" = "Görünen ad";
+"Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe." = "Hesap yok, şifre yok: Adın yalnızca bu cihazdaki tekliflerinde ve teslim almalarında görünür. Dört haneli bir teslim alma kodu her teslimatı onaylar.";

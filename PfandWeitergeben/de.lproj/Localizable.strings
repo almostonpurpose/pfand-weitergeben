@@ -137,7 +137,6 @@
 "activity.you_collect" = "Du holst ab und behältst das Pfand: ca. %@";
 "activity.collector_collects" = "%@ holt ab und behält das Pfand.";
 "activity.not_claimed" = "Noch nicht angenommen.";
-"Als abgeholt markieren" = "Als abgeholt markieren";
 "Abholung absagen" = "Abholung absagen";
 "Angebot zurückziehen" = "Angebot zurückziehen";
 
@@ -155,7 +154,6 @@
 "Demo" = "Demo";
 "Demo-Daten zurücksetzen" = "Demo-Daten zurücksetzen";
 "Datenspeicherung" = "Datenspeicherung";
-"Nur im Arbeitsspeicher" = "Nur im Arbeitsspeicher";
 "Version" = "Version";
 "Demo-Daten zurücksetzen?" = "Demo-Daten zurücksetzen?";
 "Zurücksetzen" = "Zurücksetzen";
@@ -265,8 +263,6 @@
 /* Settings and account boundary */
 "Konto" = "Konto";
 "Modus" = "Modus";
-"Lokale Demo ohne Konto" = "Lokale Demo ohne Konto";
-"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar.";
 "App-Einstellungen" = "App-Einstellungen";
 "An der Tür bleiben" = "An der Tür bleiben";
 "Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein." = "Die abholende Person bleibt außerhalb der Wohnung. Lass niemanden hinein.";
@@ -341,3 +337,18 @@
 "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft";
 "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle.";
 "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst.";
+
+/* Local identity and hand-over code */
+"actor.neighbour" = "Nachbar:in";
+"error.handover_code" = "Der Abholcode stimmt nicht. Bitte prüfe die vier Ziffern.";
+"claim.success_code" = "Angebot angenommen. Dein Abholcode ist %@. Du findest ihn unter Aktivität.";
+"account.mode_local" = "Lokal, ohne Konto";
+"storage.on_device" = "Auf diesem Gerät";
+"Abholung bestätigen" = "Abholung bestätigen";
+"Abholcode" = "Abholcode";
+"Bestätigen" = "Bestätigen";
+"Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn." = "Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn.";
+"Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt." = "Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt.";
+"Bestätige mit diesem Code, sobald du den Beutel geholt hast." = "Bestätige mit diesem Code, sobald du den Beutel geholt hast.";
+"Anzeigename" = "Anzeigename";
+"Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe." = "Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe.";

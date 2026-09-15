@@ -7,6 +7,7 @@
 ## Required guarantees
 
 - Claim is atomic: exactly one collector can move an open offer to claimed.
+- The device-local participant identifier (`LocalIdentity.id`) is the placeholder for an authenticated actor. The server issues the four-digit hand-over code at claim time, returns it only to the collector, and validates it on collect; the owner never receives it through the API.
 - The public response never contains a private residence or precise owner coordinate; only a rounded discovery area is public.
 - A claim-specific home address or agreed hand-off location is visible only to the offer owner and accepted collector.
 - Every status mutation records actor, server timestamp, previous state and next state.
@@ -26,7 +27,7 @@
 | POST | `/offers` | create an offer |
 | GET | `/offers/:id` | public detail or actor-authorised hand-off detail |
 | POST | `/offers/:id/claim` | atomic claim |
-| POST | `/offers/:id/collect` | mark collected |
+| POST | `/offers/:id/collect` | mark collected; body carries the hand-over code |
 | POST | `/offers/:id/cancel` | cancel |
 | POST | `/offers/:id/reports` | submit safety/moderation report |
 | GET | `/activity` | actor's offers and claims |

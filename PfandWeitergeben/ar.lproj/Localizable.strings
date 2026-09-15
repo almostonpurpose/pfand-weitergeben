@@ -122,7 +122,6 @@
 "activity.you_collect" = "أنت تستلم وتحتفظ بالتأمين: نحو %@";
 "activity.collector_collects" = "%@ يستلم ويحتفظ بقيمة التأمين.";
 "activity.not_claimed" = "لم يُقبل بعد.";
-"Als abgeholt markieren" = "وضع علامة تم الاستلام";
 "Abholung absagen" = "إلغاء الاستلام";
 "Angebot zurückziehen" = "سحب العرض";
 "Demo-Profil" = "ملف تجريبي";
@@ -138,7 +137,6 @@
 "Demo" = "عرض تجريبي";
 "Demo-Daten zurücksetzen" = "إعادة ضبط البيانات التجريبية";
 "Datenspeicherung" = "تخزين البيانات";
-"Nur im Arbeitsspeicher" = "في الذاكرة فقط";
 "Version" = "الإصدار";
 "Demo-Daten zurücksetzen?" = "إعادة ضبط البيانات التجريبية؟";
 "Zurücksetzen" = "إعادة ضبط";
@@ -205,11 +203,9 @@
 "Gesamt" = "الإجمالي";
 "Grobe Gesamtzahl" = "العدد الإجمالي التقريبي";
 "Grobe Schätzung – kann falsch sein. Passe die Gesamtzahl an und verteile sie unten auf die Pfandarten." = "هذا تقدير تقريبي وقد يكون خاطئاً. عدّل العدد الإجمالي ووزّعه أدناه على فئات التأمين.";
-"In der Produktionsfassung ist ein schlankes Konto zum Erstellen oder Annehmen nötig. Die öffentliche Suche bleibt ohne Anmeldung nutzbar." = "في النسخة الفعلية يلزم حساب بسيط لإنشاء العروض أو قبولها. يبقى تصفح العروض العامة متاحاً دون تسجيل الدخول.";
 "Keine aktiven Abholungen" = "لا توجد عمليات استلام نشطة";
 "Kontaktlos abholen" = "استلام دون تواصل مباشر";
 "Konto" = "الحساب";
-"Lokale Demo ohne Konto" = "نسخة تجريبية محلية بلا حساب";
 "Mehrwegpfand beträgt üblicherweise 8 oder 15 Cent; Einwegpfand 25 Cent. Prüfe im Zweifel das Etikett." = "تأمين العبوات القابلة لإعادة الاستخدام يكون عادةً 8 أو 15 سنتاً، وتأمين العبوات أحادية الاستخدام 25 سنتاً. تحقّق من الملصق عند الشك.";
 "Modus" = "الوضع";
 "Nimm ein Angebot an oder erstelle ein Angebot." = "اقبل عرضاً أو أنشئ عرضاً.";
@@ -315,3 +311,18 @@
 "Bezirkliche Hilfe bei Wohnungsverlust, Mietschulden oder fehlender Unterkunft" = "مساعدة محلية عند فقدان السكن أو ديون الإيجار أو عدم وجود مأوى";
 "Zeiten und Kapazitäten können sich ändern. Prüfe den aktuellen Wegweiser oder die verlinkte Stelle." = "قد تتغير الأوقات والطاقة الاستيعابية. تحقّق من الدليل الحالي أو الجهة المرتبطة.";
 "Bei akuter gesundheitlicher Gefahr oder wenn jemand nicht ansprechbar ist, ruf 112. Bei unmittelbarer Bedrohung ruf 110. Die App ist kein Notfalldienst." = "عند وجود خطر صحي حاد أو إذا كان شخص ما لا يستجيب، اتصل بـ112. عند وجود تهديد مباشر، اتصل بـ110. التطبيق ليس خدمة طوارئ.";
+
+/* Local identity and hand-over code */
+"actor.neighbour" = "جار/جارة";
+"error.handover_code" = "رمز الاستلام غير صحيح. يرجى التحقق من الأرقام الأربعة.";
+"claim.success_code" = "تم قبول العرض. رمز الاستلام الخاص بك هو %@. ستجده ضمن النشاط.";
+"account.mode_local" = "محلي، بدون حساب";
+"storage.on_device" = "على هذا الجهاز";
+"Abholung bestätigen" = "تأكيد الاستلام";
+"Abholcode" = "رمز الاستلام";
+"Bestätigen" = "تأكيد";
+"Gib den vierstelligen Abholcode ein. Die abholende Person kennt ihn." = "أدخل رمز الاستلام المكوّن من أربعة أرقام. الشخص الذي يستلم يعرفه.";
+"Nenne den Code bei der Übergabe. Damit wird die Abholung bestätigt." = "اذكر الرمز عند التسليم. بذلك يتم تأكيد الاستلام.";
+"Bestätige mit diesem Code, sobald du den Beutel geholt hast." = "أكّد بهذا الرمز بمجرد أن تأخذ الكيس.";
+"Anzeigename" = "الاسم المعروض";
+"Kein Konto, kein Passwort: Dein Name steht nur auf deinen Angeboten und Abholungen auf diesem Gerät. Ein vierstelliger Abholcode bestätigt jede Übergabe." = "لا حساب ولا كلمة مرور: يظهر اسمك فقط في عروضك واستلاماتك على هذا الجهاز. رمز استلام من أربعة أرقام يؤكد كل تسليم.";
